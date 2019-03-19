@@ -1,3 +1,3 @@
 # umazhar.github.io
 
-For my personal website. 
+Some code for my personal website. 
