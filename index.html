@@ -1,160 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
-  
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Umair Mazhar">
-    <meta name="description" content="Just a guy from Edmonton.">
-    <title>
-       Umair Mazhar
-    </title>
+	<title>Identity Leak</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  
-    <style>
-      html {
-        font-family: "Roboto", sans-serif;
-      }
+    <meta name="description" content="Check if your browser leaks your identity">
+    <meta property="image" content="http://webkay.robinlinus.com/webkay-logo-large.png" />
+    <meta property="author" content="Check if your browser leaks your identity - Auto-fill phishing demo" />
+    <meta property="og:title" content="Check if your browser leaks your identity - Auto-fill phishing demo" />
+    <meta property="og:image" content="http://webkay.robinlinus.com/webkay-logo-large.png" />
+    <meta property="og:image:url" content="http://webkay.robinlinus.com/webkay-logo-large.png" />
+    <meta property="og:site_name" content="Check if your browser leaks your identity - Auto-fill phishing demo" />
+    <meta property="og:type" content="article" />
+    <meta property="og:author" content="https://facebook.com/RobinLinus" />
+    <meta property="fb:pages" content="451189218422617" />
+    <meta property="fb:profile_id" content="451189218422617" />
+    <meta property="og:url" content="https://robinlinus.github.io/autofill-phishing/" />
+    <meta property="fb:app_id" content="1527795287522439" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Check if your browser leaks your identity - Auto-fill phishing demo">
+    <meta name="twitter:image" content="http://webkay.robinlinus.com/webkay-logo-large.png" />
+    <meta name="twitter:description" content="Check if your browser leaks your identity - Auto-fill phishing demo">
+    <meta name="twitter:creator:id" content="4675481071">
+    <meta name="author" content="Robin Linus" />
 
-      body {
-        font-size: 18px;
-        padding: 1.5em;
-        line-height: 1.25em;
-        color: #111; 
-        background-color: white; 
+	<style type="text/css">
+		body{
+			background: #82B1FF;
+			text-align: center;
+			color: white;
+			font-family: sans-serif;	
+			padding-top: 24px;
+			padding-bottom: 40px;
+			line-height: 20px;
+		}
 
-      } 
+		form{
+		   margin: 0 auto;
+		   width: 90%;
+		   max-width: 720px;
+		}
 
-      h1 {
-        font-family: "Fira Sans", sans-serif;
-        font-weight: 600;
-        color: rgb(34, 150, 150)
-      }
-      
-      h2, h3, h4, h5, h6 {
-        font-family: "Fira Sans", sans-serif;
-        font-weight: 600;
-      }
+		#name{
+			display: inline-block;
+			width: 100%;
+		    font-size: 24px;
+		    -webkit-appearance: none;
+		    -moz-appearance: none;
+		    appearance: none;
+		    box-shadow: none;
+		    border-radius: 3px;
+		    box-sizing: border-box;
+		    background: #448AFF;
+		    color: white;
+		    text-align: center;
+		    padding: 12px;
+		    border: none;
+		    border-bottom: solid 2px #82B1FF;
+		    -webkit-transition: border 0.3s;
+		    transition: border 0.3s;
+		}
 
-      code, pre, kbd, samp {
-        font-family: "Inconsolata", monospace;
-        font-size: 0.95em;
-      }
+		#name:focus {
+    		border-bottom: solid 2px #F48FB1;
+		}
 
-      a {
-        color: #0066dd;
-        text-decoration: none;
-      }
+		#innocent{
+			margin-top: 64px;
+		}
 
-      a:hover {
-        text-decoration: underline;
-      }
+		#innocent span{
+			font-size: 11px;
+		}
 
-      .container {
-      	max-width: 300px; 
-        margin: 0 auto;
+		#pwnd{
+			margin-top: 80px;
+			-webkit-transition: transform 500ms;
+			transition: transform 500ms;
+			transform: scale(0.01);
+			-webkit-transform: scale(0.01);
+			height: 20px;
+		}
 
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-evenly;
-        align-items: flex-start;
-      }
+		#pwnd input{
+			background: none;
+		    border: none;
+		    display: inline-block;
+		    padding: 8px;
+		    margin: 0;	
+		}
 
-      header {
-        margin: 0.5em auto;
-        text-align: center;
-      }
+		a{
+			color: white;
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
 
-      main {
-        margin: 0.5em 0;
-      }
+		#explain{
+			text-align: left;
+		}
 
-      .header-secondary {
-        font-size: 0.9em;
-      }
+		footer {
+		    margin-top: 64px;
+		    padding: 16px;
+		    font-size: 16px;
+		    text-align: center;
+		    margin-bottom: 49px;
+		}
+	</style>
+</head>
+<body>
+	<h2>Auto-fill Phishing Demo</h2>
+	<noscript><h1>Javascript must be enabled!</h1><style>h1{margin-top: 80px;}form{display: none;}</style></noscript>
+	<form autocomplete="on">
+		<div id="explain">
+			This is a simple demonstration of a security issue in most browser's  Auto-fill feature.<br> 
+		It is inspired by <i><a href="https://www.theguardian.com/technology/2017/jan/10/browser-autofill-used-to-steal-personal-details-in-new-phising-attack-chrome-safari" target="_blank">a recent publication</a></i> and designed to demonstrate this issue to less tech-savvy users.<br> <b>(Firefox Desktop and iOS Safari are immune from this issue)</b>
+		</div>
+		<div id="innocent">
+			<h3>Start typing or click to use autofill:</h3>
+			<input id="name" name="name" type="text" placeholder="Your Name" autofocus tabindex="1" required autocomplete="name">
+			<br><span>(None of your data will leave your device)</span>
+		</div>
+		<div id="pwnd">
+			<h1>Identity leaked!</h1>
+			Did you notice all those hidden fields?<br><br>
+			<h4>Your Names</h4>
+			<input id="firstname" name="firstname" type="text" >
+			<input id="lastname" name="lastname" type="text">
+			<h4>Your Email</h4>
+			<input id="email" name="email" type="text" id="email">
+			<h4>Your Job</h4>
+			<input id="company" name="company" type="text"> 
+			<h4>Your Address</h4>
+			<input id="street" name="street" type="text" id="street">
+			<input id="postal" name="postal" type="text">
+			<input id="city" name="city" type="text">
+			<input id="country" name="country" type="text"> 
+			<h4>Your Phone Number</h4>
+			<input id="phone" name="phone" type="text">
+			<h4>Credit Card Info</h4>
+			<input id="cc_number" type="text" name="cc_number">
+			<input id="cc_month" type="number" name="cc_month">
+			<input id="cc_year" type="number" name="cc_year">
+			<input id="cc_cvv" type="number" name="cc_cvv">
+			<br><br>
+			<div><strong>Always be suspicious when you use auto-fill!</strong><br>
+			Your browser may fill fields that are hidden from you. 
+			</div><br><br><br>
+			<a href="https://github.com/RobinLinus/autofill-phishing" target="_blank">This demo is open source.</a><br><br><br><br>
+		</div>
+	</form>
 
-      .header-title, .header-secondary div {
-        margin: 0.33em 0;
-      }
+<a href="https://robinlinus.github.io"><footer>Built with ♥ by RobinLinus</footer></a>
+<script type="text/javascript">
+	var q = function(id){
+		return document.getElementById(id);
+	}
+	q('name').oninput=function(){
+		debounce(function(){
+			if(q('email').value || q('email').value){
+				var pwnd =q('pwnd').style;
+				pwnd.height='auto';
+				pwnd.transform='scale(1)';
+				document.activeElement.blur();
+			} else {
+				q('pwnd').style.transform='scale(0.01)';
+			}
+		})
+	}
 
-      header a, .icons a {
-        color: #111;
-      }
+	var timer = null;
+	function debounce(callback){
+		if(timer){
+			clearTimeout(timer);
+		}
+		timer = setTimeout(callback,500);
+	}
 
-      header a:hover {
-        text-decoration: none;
-      }
-
-      .front-page {
-        display: flex;
-        flex-direction: center;
-        justify-content: space-between;
-        align-items: center;
-
-      }
-
-      @media (min-width: 500px) {
-        .front-page {
-          flex-direction: column-reverse;
-          column-gap: 1rem;
-        }
-
-        .bio-photo {
-          order: 1;
-        } 
-      }
-      
-    </style>
-  </head>
-
-  <body>
-    <div class="container">
-      <header>
-        <h1 class="header-title">Umair Mazhar</h1>
-        <div class="header-secondary">
-
-
-          <div><i class="fas fa-map-marker-alt"></i> <code> Edmonton / Alberta / Canada </code></div>
-
-          <div class="icons">
-            [
-            <a href="https://www.linkedin.com/in/umazhar/"> <i class="fab fa-linkedin"></i></a> /
-            <a href="https://github.com/umazhar"> <i class="fab fa-github"></i></a> /
-            <a href="https://www.instagram.com/u.m.air/"> <i class="fab fa-instagram"></i></a> 
-            ]
-          </div>
-
-        </div>
-      </header>
-
-      <main>
-        <div class="front-page">
-  <img src="bio-photo.png" alt="Photo of me" class="bio-photo" width="250" height="250">
-  <div class="bio-text">
-    <p>Hi, I’m <strong>Umair</strong>.</p>
-    <p>Just a guy studying engineering.</p>
-  </div>
-</div>
-
-      </main>
-
-      <footer>
-        <small>© 2019 Umair Mazhar
-      </footer>
-    </div>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145778135-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-145778135-1');
 </script>
-
-  </body>
-
+<iframe style="position:fixed;bottom:0;left:0;z-index:10;" src="https://robinlinus.github.io/share-the-love/#msg=Check if your browser leaks your identity&url=https://robinlinus.github.io/autofill-phishing/&twitter=robin_linus&github=robinlinus/autofill-phishing" height="50" width="100%" frameborder="0"></iframe>
+</body>
 </html>
