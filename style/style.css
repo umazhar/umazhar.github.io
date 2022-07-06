@@ -10,9 +10,19 @@
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: #605a5e;
+    background-color: rgb(39, 39, 39);
     font-family: 'Poppins', sans-serif;
+    /* Persistent navbar */
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  
 } 
+
+
+html, body{
+    height: 100%;
+}
 
 .logo{
     color: rgb(226, 226, 226);
@@ -72,7 +82,7 @@
             right: 0px;
             height: 92vh;
             top: 8vh;
-            background-color:#5D4954;
+            background-color:rgb(39, 39, 39);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -90,6 +100,16 @@
 
 .nav-active{
     transform: translateX(0%);
+}
+
+/* body of website, everytime it has space it pushes on it (min heigh = 100%) */
+.page-wrapper {
+    margin-top: 70px; 
+    min-height: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+
+
 }
 
 /* Slide animation */
@@ -114,7 +134,27 @@
 
 .toggle .line3{
     transform: rotate(45deg) translate(-5px, -6px);
+}
 
-    
+/* --------footer styling-------- */
+.footer {
+    background-color: rgb(39, 39, 39);
+    color: rgb(226, 226, 226);
+    height: 40px;
+    position: relative;
+}
+
+.footer .footer-bottom {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0px;
+    background: rgb(39, 39, 39);
+    color: rgb(226, 226, 226);
+    height: 50px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
 }
 
