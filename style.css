@@ -1,0 +1,62 @@
+h1.name {
+  background-color: #111111;
+  color:#00aa00;
+}
+
+.fnt{
+    font-family: "MV Boli", "Sans Serif";
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: normal;
+}
+
+h1 {
+    border-bottom-style: dotted;
+}
+
+.lorem{
+    border-style: solid;
+    padding: 5px;
+    border-style: outset;
+    border-width: 3px 5px 3px 5px;
+    border-color: green;
+    margin: 25px;
+}
+
+html {
+    background-image: url("images/846661.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.rainbow {
+    background: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+    color: white;
+}
+
+a:link{
+    color: green;
+}
+
+a:visited {
+    color: red;
+}
+
+button:hover{
+    background-color: red;
+    color:white;
+}
+
+button:active{
+    background-color: blue;
+}
+
+li:first-child {
+    background-color: #93ff7d;
+}
+
+
+
+
