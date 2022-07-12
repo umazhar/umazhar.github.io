@@ -5,57 +5,50 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Umair Mazhar</title>
-  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" media = "screen" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <nav>
-    <div class = "logo">
-      <h4>Umair Mazhar</h4>
+  <div class = "flex-wrapper"> 
 
-    </div>
+    <nav>
+      <div class = "logo"><h4>Umair Mazhar</h4></div>
 
-    <ul class = "nav-links">
-      <li>
-        <a href="#"">Home</a>
-      </li>
-      <li>
-        <a href="#"">About</a>
-      </li>
-      <li>
-        <a href="#"">Experience</a>
-      </li>
-      <li>
-        <a href="#"">Projects</a>
-      </li>
+      <ul class = "nav-links">
+        <li><a href="#"">Home</a></li>
+        <li><a href="#"">About</a></li>
+        <li><a href="#"">Experience</a></li>
+        <li><a href="#"">Projects</a></li>   
+      </ul>
+
+      <div class = "burger">
+        <div class = "line1"></div>
+        <div class = "line2"></div>
+        <div class = "line3"></div>
+      </div>
+    </nav>
+
+    <div class = "content">
+        
       
-    </ul>
+      <!-- particles.js container -->
+      <div id="particles-js"></div>
 
-    <div class = "burger">
-      <div class = "line1"></div>
-      <div class = "line2"></div>
-      <div class = "line3"></div>
+      <script src="./js/particles.js"></script>
+      <script src = "./js/app.js"></script>
     </div>
-  </nav>
 
-  <script src = "app.js"></script>
+  <!-- <div class="page-wrapper">
+    Hi! I'm Umair, an electrical engineering student at UBC who is interested in software development. 
+  </div> -->
 
-  <div class="page-wrapper">
-    Hi! I am Umair, an electrical engineering student at UBC who is passionate about software development 
-  </div>
-
-  <!-- footer   -->
-  <div class="footer">
-    <div class="footer-content">
-      <div class="footer-section about"></div>
-      <div class="footer-section links"></div>
-      <div class="footer-section contact-form"></div>
+    <!-- footer   -->
+    <div class="footer">
+        &copy; Umair M. 2022
     </div>
-    <div class="footer-bottom">
-      &copy; Umair M. 2022
-    </div>
-</body>
+  
+  </body>
 </html>
