@@ -35,6 +35,20 @@ html, body{
 /* remove bullet points */
 .nav-links li{
     list-style: none;
+    border: none;
+    border-radius: 0px;
+    padding: 30px 30px;
+    z-index: 1;
+        /* box-shadow: inset 0 0 0 0 white; */
+    transition: 0.2s;
+}
+
+.nav-links li:hover{
+    box-shadow: inset 300px 0 0 0 grey;
+    color: #255784;
+    background: #15cec1;
+    color: red;
+    box-shadow: 0 0 10px #15cec1, 0 0 40px #15cec1, 0 0 80px #15cec1;
 }
 
 .nav-links{
@@ -50,6 +64,10 @@ html, body{
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 14px;
+}
+
+.nav-links a:hover{
+    color: #255784;
 }
 
 .burger{
