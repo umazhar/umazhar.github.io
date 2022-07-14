@@ -35,12 +35,10 @@ html, body{
     font-size: 20px;
 }
 
-.logo h4:link { text-decoration: none; }
-
-.logo 
-
-
-.logo h4:visited { text-decoration: none; }
+.logo h4:link, .logo h4:visited { 
+    text-decoration: none;
+    color: inherit; 
+}
 
 
 .logo h4:hover { 
@@ -228,7 +226,7 @@ h4 {
     margin-top: auto;
 }
 
-/* ---- particles.js container ---- */
+/* ---- particles.js ---- */
 
 #particles-js{
   width: 100%;
@@ -271,12 +269,83 @@ h4 {
 
 }
 
+
 @media only screen and (max-width:550px) {
     #about-me {
         margin: 0;
         font-size: 40px
     }
 }
+
+.container {
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin: 130px auto;
+}
+
+.about-container {
+    font-family: 'Poppins', sans-serif;
+    color:rgb(200, 200, 200);
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin: 100px auto;
+    top: 50px;
+    bottom: 100px;
+}
+
+.about-container h1 {
+    font-size: 30px;
+}
+
+.about-container a {
+    color:rgb(200, 200, 200);
+    cursor: pointer;
+    text-decoration:underline; 
+}
+
+@media only screen and (max-width:800px) {
+    .about-container {
+        width: 500px;
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .about-container {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+.container .box{
+    position: relative;
+    width: calc(400px - 30px); 
+    height: calc(300px - 30px);
+    background: rgb(20, 20, 20);
+    float:left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+    color: rgb(200, 200, 200);
+    font-family: 'Poppins', sans-serif;
+    padding-inline: 1em;
+
+}
+
+.container h2 {
+    position:relative;
+    width: 300px;
+    height: 400px;
+    margin: 15px 65px;
+    align-items: center;
+}
+
+
+
+
 
 
 
