@@ -24,32 +24,53 @@ html, body{
     height: 100%;
     background-color: rgb(30, 32, 33);
 }
-
-.logo{
+.logo {
+    text-decoration: none;
+}
+.logo h4{
     color: rgb(226, 226, 226);
+    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
 }
+
+.logo h4:link { text-decoration: none; }
+
+.logo 
+
+
+.logo h4:visited { text-decoration: none; }
+
+
+.logo h4:hover { 
+    color: grey;
+    cursor: pointer;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 5px #fff,
+    0 0 2px #fff,
+    0 0 10px rgb(255, 255, 255);
+    transition: 0.25s;
+}
+
+
+.logo h4:active { text-decoration: none; }
 
 /* remove bullet points */
 .nav-links li{
     list-style: none;
     border: none;
     border-radius: 0px;
-    padding: 30px 30px;
-    z-index: 1;
         /* box-shadow: inset 0 0 0 0 white; */
     transition: 0.2s;
 }
 
 .nav-links li:hover{
-    box-shadow: inset 300px 0 0 0 grey;
-    color: #255784;
-    background: rgb(200, 200, 200);
-    color: red;
+    color: white;
     /* box-shadow: 0 0 10px #15cec1, 0 0 40px #15cec1, 0 0 80px #15cec1; */
-    box-shadow: 0 0 10px rgb(200, 200, 200), 0 0 20px rgb(200, 200, 200), 0 0 30px rgb(200, 200, 200);
+    text-decoration: underline;
+    /* box-shadow: 0 0 10px rgb(200, 200, 200), 0 0 20px rgb(200, 200, 200), 0 0 30px rgb(200, 200, 200); */
 
 }
 
@@ -60,7 +81,9 @@ html, body{
 }
 
 /* a tags */
-.nav-links a{
+
+/* Do not include current current section in navbar in css styling (bold it later) */
+.nav-links a:not(#current-section){
     color: rgb(226, 226, 226);
     text-decoration: none;
     letter-spacing: 3px;
@@ -68,8 +91,26 @@ html, body{
     font-size: 14px;
 }
 
+#current-section {
+    color:white;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 5px rgb(255, 255, 255)
+
+
+}
+
+h4 {
+    text-decoration: none;
+}
+
 .nav-links a:hover{
-    color: #255784;
+    color: white;
 }
 
 .burger{
@@ -118,7 +159,7 @@ html, body{
         display: block;
     }
     #about-me-title {
-        color: red;
+        color: white;
 
     }
 }
@@ -236,6 +277,8 @@ html, body{
         font-size: 40px
     }
 }
+
+
 
 
 
