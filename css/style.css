@@ -2,7 +2,7 @@
 *{
     margin: 0px; 
     padding: 0px;
-    box-sizing: border-box; 
+    /* box-sizing: border-box;  */ */
 }
 
  nav{
@@ -52,7 +52,6 @@ html, body{
     transition: 0.25s;
 }
 
-
 .logo h4:active { text-decoration: none; }
 
 /* remove bullet points */
@@ -75,7 +74,7 @@ html, body{
 .nav-links{
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: 20%;
 }
 
 /* a tags */
@@ -114,6 +113,8 @@ h4 {
 .burger{
     display: none;
     cursor: pointer;
+    z-index: 1;
+
 }
 .burger div {
     width: 25px;
@@ -121,6 +122,7 @@ h4 {
     background-color: rgb(226, 226, 226);
     margin: 5px;
     transition: all 0.3s ease;
+
 }
 
 /* If window width is less than 1024px, change the spacing of the navbar links to prevent them clashing */
@@ -149,6 +151,7 @@ h4 {
             width: 35%;
             transform: translateX(100%);
             transition: transform 0.5s ease-in;
+            
     }
     .nav-links li{
         opacity: 0;
@@ -234,19 +237,14 @@ h4 {
   background-color: rgb(30, 32, 33); 
   background-image: url('');
   background-size:auto;
-  background-position: 50% 50%;
   background-repeat: no-repeat;
   /* background-repeat: no-repeat; */
 
 
 }
 
-.content {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
+
+
 
 #about-me-title {
     font-size: 5em;
@@ -267,6 +265,17 @@ h4 {
     text-align: center;
 
 
+}
+
+/* icons */
+#about-me-description i{
+    color: rgb(200, 200, 200);
+    padding-inline: 8px;
+    padding-top: 20px;
+}
+
+#about-me-description .icons a{
+    color: rgb(200, 200, 200);
 }
 
 
@@ -342,6 +351,49 @@ h4 {
     margin: 15px 65px;
     align-items: center;
 }
+
+.terminal-logo {
+    color: rgb(200, 200, 200);
+    font-family:monospace;
+}
+
+.logo a, .logo a:visited {
+    color: rgb(200, 200, 200);
+    text-decoration: none;
+}
+
+.logo-text{
+    font-size:1.125rem
+}
+.logo-cursor{
+    display:inline-block;
+    width:10px;
+    height:1rem;
+    background:#fe5186;
+    margin-left:5px;
+    border-radius:1px;
+    animation:cursor 1s infinite;
+    background-color:rgb(200, 200, 200);
+    animation-duration:2s;
+}
+@media (prefers-reduced-motion: reduce){
+    .logo-cursor{
+        animation:none
+    }
+}
+@keyframes cursor{
+    0%{
+        opacity:0
+    }
+    50%{
+        opacity:1
+    }
+    100%{
+        opacity:0
+    
+
+
+
 
 
 
