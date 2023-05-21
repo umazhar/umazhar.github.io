@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/umazhar.github.io/static/css/main.144921c4.css",
+    "main.js": "/umazhar.github.io/static/js/main.97edaae0.js",
+    "static/js/787.fb771931.chunk.js": "/umazhar.github.io/static/js/787.fb771931.chunk.js",
+    "static/media/placeholder.png": "/umazhar.github.io/static/media/placeholder.1c428a09d8f97e6b81fc.png",
+    "static/media/robot.png": "/umazhar.github.io/static/media/robot.c09fd6e96ff70e8de989.png",
+    "static/media/mountain.png": "/umazhar.github.io/static/media/mountain.7b299022159601fab5a7.png",
+    "index.html": "/umazhar.github.io/index.html",
+    "main.144921c4.css.map": "/umazhar.github.io/static/css/main.144921c4.css.map",
+    "main.97edaae0.js.map": "/umazhar.github.io/static/js/main.97edaae0.js.map",
+    "787.fb771931.chunk.js.map": "/umazhar.github.io/static/js/787.fb771931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.144921c4.css",
+    "static/js/main.97edaae0.js"
+  ]
+}
