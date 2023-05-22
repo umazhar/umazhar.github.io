@@ -12,6 +12,6 @@ function BucketList() {
 
     </div>
   );
-};
+}
 
 export default BucketList;

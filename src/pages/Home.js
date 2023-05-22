@@ -5,6 +5,7 @@ import GithubIcon from "@material-ui/icons/GitHub";
 import "../styles/Home.css";
 import { Instagram } from "@material-ui/icons";
 import mountainImage from "../assets/mountain.png";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -36,16 +37,17 @@ function Home() {
         <h1>About</h1>
         <p>Hello! My name is Umair Mazhar! :)</p>
         <p>
-          I am a fourth year electrical engineering student at the{" "}
-          <i>University of British Columbia</i> located in Vancouver, Canada. I
-          am primarily interested in software development and hardware/software
-          intersectionality. On this site, you can find my thoughts on my
-          projects, experiences, and other <a href="./BucketList" style={{textDecoration: 0}}>general</a> ideas that interest me.
+        I am a fourth year electrical engineering student at the{" "}
+        <i>University of British Columbia</i> located in Vancouver, Canada. I
+        am primarily interested in software development and hardware/software
+        intersectionality. On this site, you can find my thoughts on my
+        projects, experiences, and other{" "}
+        <Link to="/bucketlist">general</Link> ideas that interest me.
         </p>
         <p>
           If you would like to take a look at my projects, you can find a brief
           description of each of one by accessing the{" "}
-          <a href="./projects">projects page</a> or alternatively you can
+          <Link to="/projects">projects page</Link> or alternatively you can
           check out my <a href="https://github.com/umazhar">Github</a> for the
           source code.
         </p>

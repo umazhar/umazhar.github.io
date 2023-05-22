@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
@@ -10,11 +11,8 @@ import { useCallback } from "react";
 import BucketList from "./pages/BucketList";
 
 function App() {
-
-
   return (
     <div className="App">
-      {/* <Particles id="tsparticles" url="http://foo.bar/particles.json" init={particlesInit} loaded={particlesLoaded} /> */}
       <Router>
         <Navbar />
         <Routes>
@@ -22,7 +20,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/project/:id" element={<ProjectDisplay />} />
           <Route path="/experience" element={<Experience />} />
-          <Route path="/BucketList" element={<BucketList />} />
+          <Route path="/bucketlist" element={<BucketList />} />
         </Routes>
         <Footer />
       </Router>
