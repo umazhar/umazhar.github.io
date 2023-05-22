@@ -1,7 +1,7 @@
 {
   "name": "personal-portfolio",
   "version": "0.1.0",
-  "homepage": "https://umazhar.github.io/umair.fyi",
+  "homepage": "https://umazhar.github.io",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.4",
