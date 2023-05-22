@@ -22,7 +22,7 @@ function World() {
       showGlobe={false}
       showAtmosphere={false}
       polygonsData={landPolygons}
-      polygonCapMaterial={new THREE.MeshLambertMaterial({ color: 'darkslategrey', side: THREE.DoubleSide })}
+      polygonCapMaterial={new THREE.MeshLambertMaterial({ color: '#169ac6', side: THREE.DoubleSide })}
       polygonSideColor={() => 'rgba(0, 0, 0, 0)'}
     />
   );
