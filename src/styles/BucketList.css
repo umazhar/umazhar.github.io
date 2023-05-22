@@ -1,0 +1,11 @@
+.globe {
+    height: calc(100vh - 217px);
+    color: green;
+}
+
+.BucketListTitle {
+  text-align: center;
+  color: rgb(200, 200, 200);
+  font-size: 30px;
+  font-weight: bolder;
+}

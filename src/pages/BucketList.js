@@ -1,10 +1,15 @@
 import React from 'react';
-import Globe from 'react-globe.gl';
+import "../styles/BucketList.css";
+import "../components/GlobeMap";
+import GlobeMap from '../components/GlobeMap';
+
 
 function BucketList() {
   return (
-    <div>
-        <h1>Hello world</h1>
+    <div className = "globe">
+        <h1 className='BucketListTitle'>My Bucket List</h1>
+        <GlobeMap />
+
     </div>
   );
 };
