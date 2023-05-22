@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProjectDisplay from "./pages/ProjectDisplay";
 import { useCallback } from "react";
+import BucketList from "./pages/BucketList";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/project/:id" element={<ProjectDisplay />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/BucketList" element={<BucketList />} />
         </Routes>
         <Footer />
       </Router>

@@ -5,16 +5,6 @@
   color: rgb(30, 32, 33);
 }
 
-#particles-js{
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(30, 32, 33); 
-  background-image: url('');
-  background-size:auto;
-  background-repeat: no-repeat;
-  /* background-repeat: no-repeat; */
-}
-
 .about-container {
   
   font-family: 'Poppins', sans-serif;
@@ -137,7 +127,8 @@ canvas.particles-js-canvas-el {
   }
 
   .about-container {
-    width: 400px;
+    max-width: 100%;
+
   }
 
   .skills {
@@ -150,4 +141,10 @@ canvas.particles-js-canvas-el {
   .skills h2 {
     font-size: 30px;
   }
+
+  .image-container {
+    width: 350px;
+    height: 200px;
+  }
 }
+

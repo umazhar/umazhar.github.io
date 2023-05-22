@@ -1,0 +1,10 @@
+.experience {
+    height: calc(100vh - 217px);
+}
+
+@media only screen and (max-width: 1300px) {
+    .experience {
+        height: calc(100vh - 100px);
+    }
+}
+

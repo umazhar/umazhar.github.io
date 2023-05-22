@@ -28,9 +28,15 @@ function Home() {
         </div>
       </div>
       <div class="about-container">
-        <div className="image-container">
+      <img 
+        src={mountainImage} 
+        alt="Mountain" 
+        className="image-container"
+      />
+
+        {/* <div className="image-container">
           <img src={mountainImage} alt="Mountain" />
-        </div>
+        </div> */}
         <h1>About</h1>
         <p>Hello! My name is Umair Mazhar! :)</p> 
         <p>
