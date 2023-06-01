@@ -1,9 +1,23 @@
 .globe {
-    height: calc(100vh- 217px);
-    color: green;
-    margin-bottom: 30px;
-
+  height: calc(78vh) !important;
+  color: green;
+  /* margin-bottom: 30px; */
+  overflow: hidden;
+  position: relative;
 }
+
+
+
+.globe canvas {
+  width: 90% !important;
+  height: 90% !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 
 .BucketListTitle {
   text-align: center;
@@ -11,3 +25,14 @@
   font-size: 30px;
   font-weight: bolder;
 }
+
+.parent-container {
+  overflow: hidden;
+}
+
+
+
+
+
+
+
