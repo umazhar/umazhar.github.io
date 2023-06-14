@@ -1,0 +1,30 @@
+.projectItem {
+    display: flex;
+    background-color: #202737;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.projectItem:hover {
+    transform: scale(1.02);
+}
+
+.projectItem .bgImage {
+    flex: 1; /* 1/3 of the container */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-right: 20px; /* optional */
+}
+
+.projectItem .description {
+    flex: 2; /* 2/3 of the container */
+}
+
+.projectItem h1, .projectItem p {
+    margin: 0;
+}

@@ -37,18 +37,18 @@ function Home() {
         <h1>About</h1>
         <p>Hello! My name is Umair Mazhar! :)</p>
         <p>
-        I am a fourth year electrical engineering student at the{" "}
-        <i>University of British Columbia</i> located in Vancouver, Canada. I
-        am primarily interested in software development and hardware/software
-        intersectionality. On this site, you can find my thoughts on my
+        I am a fourth year electrical engineering student at the <a href="https://ubc.ca" 
+        class = "link">University of British Columbia</a> located in <mark class = "highlight">Vancouver, Canada.</mark>, I
+        am primarily interested in <mark class = "highlight">software development</mark> and <mark class = "highlight">hardware/software
+        intersectionality.</mark> On this site, you can find my thoughts on my
         projects, experiences, and other{" "}
-        <Link to="/bucketlist">general</Link> ideas that interest me.
+        <Link to="/bucketlist" class = "link">general</Link> ideas that interest me.
         </p>
         <p>
           If you would like to take a look at my projects, you can find a brief
           description of each of one by accessing the{" "}
-          <Link to="/projects">projects page</Link> or alternatively you can
-          check out my <a href="https://github.com/umazhar">Github</a> for the
+          <Link class = "link" to="/projects">projects page</Link> or alternatively you can
+          check out my <a href="https://github.com/umazhar" class = "link">Github</a> for the
           source code.
         </p>
         <img
