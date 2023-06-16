@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProjectDisplay from "./pages/ProjectDisplay";
+import Experience from "./pages/Experience";
 import { useCallback } from "react";
 import BucketList from "./pages/BucketList";
 import NavBar_new from "./components/Navbar_new";
