@@ -11,16 +11,18 @@ function Header() {
 
   return (
     <header id="landing_page_header">
-      {/* <a className="logo" href="/"><img src="assets/andrew.png" alt="logo" width="150px" /></a> */}
-      <a className = "umair_button">
-        > ./Umair
-        <div className="logo__cursor"></div>
-    </a>
+        <Link to="/" className="umair_button"> 
+            > ./umair
+            <div className="logo__cursor"></div>
+        </Link>
+
+    
       <nav>
         <ul className="nav__links">
-          <li><Link to="/"> ./home </Link></li>
-          <li><Link to="/projects"> ./projects </Link></li>
-          <li><a href="pages/blog.html">Blog</a></li>
+          <li><Link to="/"> home </Link></li>
+          <li><Link to="/projects"> projects </Link></li>
+          <li><Link to="/experience"> werk </Link></li>
+          <li><Link to="/blog"> blog </Link></li>
         </ul>
       </nav>
       <p className="menu cta" onClick={handleMenuClick}>Menu</p>
@@ -28,9 +30,10 @@ function Header() {
       <div id="mobile__menu" className={`overlay ${isActive ? 'overlay--active' : ''}`}>
         <a className="close" onClick={handleMenuClick}>&times;</a>
         <div className="overlay__content">
-          <a href="pages/about.html">About</a>
-          <a href="pages/projects.html">Projects</a>
-          <a href="pages/blog.html">Blog</a>
+          <Link to="/" onClick={handleMenuClick}> home </Link>
+          <Link to="/projects" onClick={handleMenuClick}> projects </Link>
+          <Link to="/experience" onClick={handleMenuClick}> werk </Link>
+          <Link to="/blog" onClick={handleMenuClick}> blog </Link>
         </div>
       </div>
     </header>

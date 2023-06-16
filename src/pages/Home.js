@@ -34,16 +34,16 @@ function Home() {
         {/* <div className="image-container">
           <img src={mountainImage} alt="Mountain" />
         </div> */}
+        <div id = "infobox">
         <h1>About</h1>
         <p>Hello! My name is Umair Mazhar! :)</p>
         <p>
-        I am a fourth year electrical engineering student at the <a href="https://ubc.ca" 
-        class = "link">University of British Columbia</a> located in <mark class = "highlight">Vancouver, Canada.</mark>, I
-        am primarily interested in <mark class = "highlight">software development</mark> and <mark class = "highlight">hardware/software
-        intersectionality.</mark> On this site, you can find my thoughts on my
-        projects, experiences, and other{" "}
-        <Link to="/bucketlist" class = "link">general</Link> ideas that interest me.
-        </p>
+          I am a fourth year electrical engineering student at the <a href="https://ubc.ca" 
+          class = "link">University of British Columbia</a> located in <mark class = "highlight">Vancouver, Canada.</mark>, I
+          am primarily interested in <mark class = "highlight">software development</mark> and <mark class = "highlight">hardware/software
+          intersectionality.</mark> On this site, you can find my thoughts on my
+          projects, experiences, and other{" "}
+        <Link to="/bucketlist" class = "link">general</Link> ideas that interest me.</p>
         <p>
           If you would like to take a look at my projects, you can find a brief
           description of each of one by accessing the{" "}
@@ -51,6 +51,7 @@ function Home() {
           check out my <a href="https://github.com/umazhar" class = "link">Github</a> for the
           source code.
         </p>
+        </div>
         <img
           class="gh-chart"
           src="http://ghchart.rshah.org/umazhar"

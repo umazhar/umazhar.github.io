@@ -1,13 +1,11 @@
 import React from 'react';
-import "../styles/BucketList.css";
-import "../components/GlobeMap";
-import GlobeMap from '../components/GlobeMap';
+import "../styles/blog.css";
 
 
 function Blog() {
   return (
-    <div>
-        test
+    <div id = "background">
+        
     </div>
   );
 }
