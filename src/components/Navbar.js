@@ -1,40 +1,43 @@
-import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from 'react';
 import "../styles/Navbar.css";
-import ReorderIcon from "@material-ui/icons/Reorder";
+import { Link, useLocation } from "react-router-dom";
 
+function Header() {
+  const [isActive, setIsActive] = useState(false);
 
-function Navbar() {
-
-
-  const [expandNavbar, setExpandNavbar] = useState(false);
-
-  const location = useLocation();
-
-  useEffect(() => {
-    setExpandNavbar(false);
-  }, [location]);
+  const handleMenuClick = () => {
+    setIsActive(!isActive);
+  }
 
   return (
-    <div className="navbar" id={expandNavbar ? "open" : "close"}>
-      <div className="toggleButton">
-        <button
-          onClick={() => {
-            setExpandNavbar((prev) => !prev);
-          }}
-        >
-          <ReorderIcon />
-        </button>
+    <header id="landing_page_header">
+        <Link to="/" className="umair_button"> 
+            > ./umair
+            <div className="logo__cursor"></div>
+        </Link>
+
+    
+      <nav>
+        <ul className="nav__links">
+          <li><Link to="/"> home </Link></li>
+          <li><Link to="/projects"> projects </Link></li>
+          <li><Link to="/experience"> werk </Link></li>
+          <li><Link to="/blog"> blog </Link></li>
+        </ul>
+      </nav>
+      <p className="menu cta" onClick={handleMenuClick}>Menu</p>
+
+      <div id="mobile__menu" className={`overlay ${isActive ? 'overlay--active' : ''}`}>
+        <a className="close" onClick={handleMenuClick}>&times;</a>
+        <div className="overlay__content">
+          <Link to="/" onClick={handleMenuClick}> home </Link>
+          <Link to="/projects" onClick={handleMenuClick}> projects </Link>
+          <Link to="/experience" onClick={handleMenuClick}> werk </Link>
+          <Link to="/blog" onClick={handleMenuClick}> blog </Link>
+        </div>
       </div>
-      <div className="links">
-        {/* <div className="logo__cursor"></div> */}
-        <Link to="/"> ./home </Link>
-        <Link to="/projects"> ./projects </Link>
-        <Link to="/blog"> ./blog </Link>
-        <div className="spacer"></div> 
-      </div>
-    </div>
+    </header>
   );
 }
 
-export default Navbar;
+export default Header;

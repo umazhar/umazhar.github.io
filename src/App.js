@@ -9,14 +9,13 @@ import ProjectDisplay from "./pages/ProjectDisplay";
 import Experience from "./pages/Experience";
 import { useCallback } from "react";
 import BucketList from "./pages/BucketList";
-import NavBar_new from "./components/Navbar_new";
 import Blog from "./pages/Blog"
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar_new />
+        <Navbar />
         {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />

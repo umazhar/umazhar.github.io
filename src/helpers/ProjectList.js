@@ -23,4 +23,10 @@ export const ProjectList = [
     image: missing,
     description: "Developed a desktop password manager application, using Java and SHA-256 string hashing libraries for enhanced security. The application features an interactive user interface, crafted with Swing, and achieves data persistence through JSON. To ensure the reliability of the application, comprehensive testing was carried out using JUnit and JaCoCo, resulting in an impressive 97% code coverage.",
   },
+
+  {
+    name: "Capacative Sensor Reaction Game",
+    image: missing,
+    description: "Designed a touch interface game using the AT89LP51RC2 microcontroller and 8051 Assembly code. A 555 timer was configured as an a-stable oscillator to detect frequency changes in capacitive sensors. An ISR was implemented to control speakers and timers were utilized to measure the frequency from the sensors. During testing, a function generator and oscilloscope were used to ensure proper hardware functionality.",
+  },
 ];
