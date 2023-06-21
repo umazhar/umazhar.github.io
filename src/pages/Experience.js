@@ -11,7 +11,7 @@ import image from "../assets/missing.jpg";
 function Experience() {
   return (
     <div className="experiences">
-      <h1>My Experiences</h1>
+      <h1>Experience</h1>
       {/* <div className="experienceList">
 
         <div className="experienceItem" name = "AMD" image = {image}>
