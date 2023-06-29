@@ -1,9 +1,9 @@
 import React from "react";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import EmailIcon from "@material-ui/icons/Email";
-import GithubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import "../styles/Home.css";
-import { Instagram } from "@material-ui/icons";
+import Instagram from '@mui/icons-material/Instagram';
 import mountainImage from "../assets/mountain.png";
 import { Link } from "react-router-dom";
 
@@ -21,7 +21,7 @@ function Home() {
             <Instagram style={{ marginRight: "10px" }} />
           </a>
           <a href="https://github.com/umazhar">
-            <GithubIcon style={{ marginRight: "10px" }} />
+            <GitHubIcon style={{ marginRight: "10px" }} />
           </a>
           <a href="mailto:u.mazhar@icloud.com">
             <EmailIcon style={{ marginRight: "10px" }} />
