@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 
 const ExperienceItemContainer = styled.div`
@@ -56,11 +57,13 @@ const JobDescription = styled.p`
   color: white;
 `;
 
-const ExperienceItem = ({ logoSrc, jobTitle, jobDescription }) => {
+const ExperienceItem = ({ logoSrc, jobTitle, jobDescription, link }) => {
   return (
     <ExperienceItemContainer>
       <CompanyLogoContainer>
-        <CompanyLogo src={logoSrc} alt="Company Logo" />
+        <Link to={link}>
+          <CompanyLogo src={logoSrc} alt="Company Logo" />
+        </Link>
       </CompanyLogoContainer>
       <JobInfoContainer>
         <JobTitle>{jobTitle}</JobTitle>
@@ -69,5 +72,6 @@ const ExperienceItem = ({ logoSrc, jobTitle, jobDescription }) => {
     </ExperienceItemContainer>
   );
 };
+
 
 export default ExperienceItem;

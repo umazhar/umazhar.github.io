@@ -19,9 +19,11 @@
 }
 .projectsHeaderContainer h1 {
   text-align: left;
-  width: 822px;
+  width: fit-content;
   margin: 0px;
   padding: 10px;
+  font-size: 60px;
+  color: rgb(152, 152, 163); 
 }
 
 .projectList {

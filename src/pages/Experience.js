@@ -17,20 +17,21 @@ function Experience() {
         logoSrc={amd}
         jobTitle="AMD"
         jobDescription="Silicon Design Engineering Intern | Sep 2023 - Apr 2024"
+        link="https://www.amd.com/en.html"
       />
 
       <ExperienceItem
         logoSrc={jostle}
         jobTitle="Jostle"
         jobDescription="Junior Developer Intern | Jan 2023 - Aug 2023"
+        link="https://jostle.me/"
       />
-
-
 
       <ExperienceItem
         logoSrc={eworx}
         jobTitle="eWorx Technology"
-        jobDescription="Software Developer Intern | Jan 2023 - Aug 2023"
+        jobDescription="Software Developer Intern | Jun - Sep 2022"
+        link="https://eworx.ca/"
       />
     </div>
   );
