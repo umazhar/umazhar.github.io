@@ -1,35 +1,37 @@
 import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import "../styles/Experience.css";
-import robot from "../assets/robot.png";
-import image from "../assets/missing.jpg";
+import ExperienceItem from "../components/ExperienceItem";
+import jostle from "../assets/jostle.jpeg";
+import amd from "../assets/amd.jpeg";
+import eworx from "../assets/eworx.jpeg";
 
 function Experience() {
   return (
     <div className="experiences">
-      <h1>Experience</h1>
-      {/* <div className="experienceList">
+      <div className = "experienceTitleContaienr">
+        <h1>experience.        </h1>
+      </div>
 
-        <div className="experienceItem" name = "AMD" image = {image}>
-          <div style={{ backgroundImage: `url(${image})` }} className="bgImage" />
-          <div className="description">
-            <h1>Software Engineer Intern</h1>
-            <div className="text">Paragraph bddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddla</div>
-        </div>
+      <ExperienceItem
+        logoSrc={amd}
+        jobTitle="AMD"
+        jobDescription="Silicon Design Engineering Intern | Sep 2023 - Apr 2024"
+      />
 
-        </div>
-
-        <h1 className="workItem"></h1>
-
-      </div> */}
-      
-
+      <ExperienceItem
+        logoSrc={jostle}
+        jobTitle="Jostle"
+        jobDescription="Junior Developer Intern | Jan 2023 - Aug 2023"
+      />
 
 
+
+      <ExperienceItem
+        logoSrc={eworx}
+        jobTitle="eWorx Technology"
+        jobDescription="Software Developer Intern | Jan 2023 - Aug 2023"
+      />
     </div>
   );
 }

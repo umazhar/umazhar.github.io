@@ -6,11 +6,18 @@ import "../styles/Projects.css";
 function Projects() {
   return (
     <div className="projects">
-      <h1> My Personal Projects</h1>
+      <div className="projectsHeaderContainer">
+        <h1> projects.</h1>
+      </div>
       <div className="projectList">
         {ProjectList.map((project, idx) => {
           return (
-            <ProjectItem id={idx} name={project.name} image={project.image} description = {project.description}/>
+            <ProjectItem
+              id={idx}
+              name={project.name}
+              image={project.image}
+              description={project.description}
+            />
           );
         })}
       </div>

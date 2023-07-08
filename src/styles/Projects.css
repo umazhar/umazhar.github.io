@@ -8,12 +8,21 @@
   flex-direction: column;
   padding-top: 100px;
 }
-
+.projectsHeaderContainer {
+  max-width: 822px;
+  margin: 0 auto;
+  text-align: left;
+}
 
 .projects h1 {
   color: rgb(200, 200, 200);
 }
-
+.projectsHeaderContainer h1 {
+  text-align: left;
+  width: 822px;
+  margin: 0px;
+  padding: 10px;
+}
 
 .projectList {
   width: 90vw;

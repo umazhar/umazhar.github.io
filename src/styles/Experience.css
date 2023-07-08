@@ -4,15 +4,27 @@
     padding: 0 20px;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     padding-top: 100px;
   }
+
+  .experienceTitleContaienr {
+    max-width: 844px;
+    margin: 0 auto;
+    text-align: left;
   
-  .experiences h1 {
-    color: rgb(200, 200, 200);
   }
+  .experienceTitleContaienr h1 {
+    color: rgb(200, 200, 200);
+    text-align: left;
+    width: 822px;
+    margin: 0px;
+    padding: 10px;
+  
+  } 
+
   
   .experienceList {
     width: 90vw;

@@ -19,10 +19,9 @@ function Header() {
     
       <nav>
         <ul className="nav__links">
-          <li><Link to="/"> home </Link></li>
-          <li><Link to="/projects"> projects </Link></li>
-          <li><Link to="/experience"> werk </Link></li>
-          <li><Link to="/blog"> blog </Link></li>
+          <li><Link to="/"> home. </Link></li>
+          <li><Link to="/projects"> projects. </Link></li>
+          <li><Link to="/experience">experience.</Link></li>
         </ul>
       </nav>
       <p className="menu cta" onClick={handleMenuClick}>Menu</p>
@@ -30,10 +29,9 @@ function Header() {
       <div id="mobile__menu" className={`overlay ${isActive ? 'overlay--active' : ''}`}>
         <a className="close" onClick={handleMenuClick}>&times;</a>
         <div className="overlay__content">
-          <Link to="/" onClick={handleMenuClick}> home </Link>
-          <Link to="/projects" onClick={handleMenuClick}> projects </Link>
-          <Link to="/experience" onClick={handleMenuClick}> werk </Link>
-          <Link to="/blog" onClick={handleMenuClick}> blog </Link>
+          <Link to="/" onClick={handleMenuClick}> home. </Link>
+          <Link to="/projects" onClick={handleMenuClick}> projects. </Link>
+          <Link to="/experience" onClick={handleMenuClick}> experience. </Link>
         </div>
       </div>
     </header>
