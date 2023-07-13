@@ -17,13 +17,13 @@
   
   }
   .experienceTitleContaienr h1 {
-    color: rgb(152, 152, 163);
+
     text-align: left;
     width: fit-content;
     margin: 0px;
     padding: 10px;
     font-size: 60px;
-  
+     color: rgb(152, 152, 163); 
   } 
 
   

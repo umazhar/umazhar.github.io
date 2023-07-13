@@ -1,55 +1,24 @@
-import React from 'react';
-import styled from 'styled-components';
-
-const ExperienceItemContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  border: 1px solid black;
-  margin: 10px;
-  padding: 10px;
-  background-color: white;
-  transition: 0.3s;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+.experienceItem {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
   }
-`;
-
-const CompanyLogoContainer = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const CompanyLogo = styled.img`
-  max-width: 100%;
-  max-height: 100%;
-`;
-
-const JobInfoContainer = styled.div`
-  flex: 5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 10px;
-`;
-
-const ExperienceItem = ({ logoSrc, companyName, jobTitle, jobDescription, startDate, endDate }) => {
-  return (
-    <ExperienceItemContainer>
-      <CompanyLogoContainer>
-        <CompanyLogo src={logoSrc} alt={companyName} />
-      </CompanyLogoContainer>
-      <JobInfoContainer>
-        <h2>{jobTitle}</h2>
-        <h3>{companyName}</h3>
-        <p>{jobDescription}</p>
-        <p>{startDate} - {endDate}</p>
-      </JobInfoContainer>
-    </ExperienceItemContainer>
-  );
-};
-
-export default ExperienceItem;
+  
+  .companyLogo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .jobInfo {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    
+  }
+  

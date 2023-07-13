@@ -18,6 +18,7 @@ function Experience() {
         jobTitle="AMD"
         jobDescription="Silicon Design Engineering Intern | Sep 2023 - Apr 2024"
         link="https://www.amd.com/en.html"
+        skills={["SystemVerilog","C++", "Ruby", "TCL", "SQL"]}
       />
 
       <ExperienceItem
@@ -25,6 +26,9 @@ function Experience() {
         jobTitle="Jostle"
         jobDescription="Junior Developer Intern | Jan 2023 - Aug 2023"
         link="https://jostle.me/"
+        skills={["Java", "MySQL", "GraphQL", "Redis", "Amazon EC2"]}
+
+        
       />
 
       <ExperienceItem
@@ -32,6 +36,8 @@ function Experience() {
         jobTitle="eWorx Technology"
         jobDescription="Software Developer Intern | Jun - Sep 2022"
         link="https://eworx.ca/"
+        skills={["React", "Django", "Javascript", "MySQL", "Node.js"]}
+
       />
     </div>
   );
