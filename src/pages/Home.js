@@ -6,6 +6,7 @@ import "../styles/Home.css";
 import Instagram from '@mui/icons-material/Instagram';
 import mountainImage from "../assets/mountain.png";
 import { Link } from "react-router-dom";
+import WaveComponent from '../components/WaveComponent';
 
 function Home() {
   return (
@@ -26,7 +27,12 @@ function Home() {
           <a href="mailto:u.mazhar@icloud.com">
             <EmailIcon style={{ marginRight: "10px" }} />
           </a>
+          
+
         </div>
+        <div className="WaveContainer">
+            <WaveComponent />
+          </div>
       </div>
       <div class="about-container">
         <img src={mountainImage} alt="Mountain" className="image-container" />
