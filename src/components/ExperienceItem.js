@@ -8,7 +8,7 @@ const ExperienceItemContainer = styled.div`
   border: 1px solid black;
   margin: 10px;
   padding: 10px;
-  background-color: rgb(24, 28, 42);
+  background-color: rgb(18, 18, 18);
   transition: 0.3s;
   border-radius: 10px; // Added for rounded corners
   max-width: 800px; // Limit the width to 800px
