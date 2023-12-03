@@ -2,6 +2,7 @@ import React from "react";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Twitter from '@mui/icons-material/Twitter';
 import "../styles/Home.css";
 import Instagram from '@mui/icons-material/Instagram';
 import mountainImage from "../assets/mountain.png";
@@ -20,6 +21,9 @@ function Home() {
           </a>
           <a href="https://www.instagram.com/coolmathgames.ca">
             <Instagram style={{ marginRight: "10px" }} />
+          </a>
+          <a href="https://twitter.com/umair_mz">
+            <Twitter style={{ marginRight: "10px" }} />
           </a>
           <a href="https://github.com/umazhar">
             <GitHubIcon style={{ marginRight: "10px" }} />
