@@ -12,6 +12,8 @@ const ExperienceItemContainer = styled.div`
   transition: 0.3s;
   border-radius: 10px; // Added for rounded corners
   max-width: 800px; // Limit the width to 800px
+  font-size: 12px;
+
 
   &:hover {
     transform: scale(1.01);

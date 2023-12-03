@@ -1,5 +1,5 @@
 import robot from "../assets/robot.png";
-import placeholder from "../assets/placeholder.png";
+// import placeholder from "../assets/placeholder.png";
 import missing from "../assets/missing.jpg";
 
 export const ProjectList = [

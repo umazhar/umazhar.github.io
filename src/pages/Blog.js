@@ -1,6 +1,6 @@
 import React from 'react';
 import "../styles/blog.css";
-import circuit from "../components/circuit.js"
+// import circuit from "../components/circuit.js"
 
 
 function Blog() {

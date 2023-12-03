@@ -6,6 +6,7 @@ import jostle from "../assets/jostle.jpeg";
 import amd from "../assets/amd.jpeg";
 import eworx from "../assets/eworx.jpeg";
 import dbot from "../assets/dbot.png";
+import bigleaf from "../assets/bigleaf.png";
 
 function Experience() {
   return (
@@ -51,6 +52,14 @@ function Experience() {
         jobDescription="Software Engineer Intern | Jun - Sep 2022"
         link="https://eworx.ca/"
         skills={["React", "Django", "Javascript", "MySQL", "Node.js"]}
+      />
+
+      <ExperienceItem
+        logoSrc={bigleaf}
+        jobTitle="The Big Leaf"
+        jobDescription="Software Developer Intern [Contract, part-time] | May - Jun 2022"
+        link="https://thebigleaf.com/"
+        skills={["Svelte","Javascript", "HTML/CSS", "Heroku"]}
       />
     </div>
   );
