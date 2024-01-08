@@ -76,16 +76,17 @@ header {
 }
 
 .overlay {
-  height: 100;
-  width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 101; /* Higher than the header */
   left: 0;
   top: 0;
-  background-color: #24252a;
-  overflow-x: hidden;
-  transition: all 0.5s ease 0s;
+  width: 0; /* Initially no width */
+  height: 100%; /* Full height */
+  background-color: #24252a; /* Menu background */
+  overflow-x: hidden; /* Hide horizontal overflow */
+  transition: 0.5s; /* Smooth transition for opening/closing */
 }
+
 
 .overlay--active {
   width: 100%;

@@ -19,9 +19,9 @@ function Header() {
     
       <nav>
         <ul className="nav__links">
-          <li><Link to="/"> ./home </Link></li>
-          <li><Link to="/projects"> ./projects </Link></li>
-          <li><Link to="/experience">./experience</Link></li>
+          <li><Link to="/"> home. </Link></li>
+          <li><Link to="/projects"> projects. </Link></li>
+          <li><Link to="/experience"> experience.</Link></li>
         </ul>
       </nav>
       <p className="menu cta" onClick={handleMenuClick}>Menu</p>
