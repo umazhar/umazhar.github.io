@@ -1,3 +1,4 @@
+/* Home Component Styles */
 .home {
   width: 100%;
   align-items: center;
@@ -6,9 +7,8 @@
 }
 
 .about-container {
-  
   font-family: 'Poppins', sans-serif;
-  color:rgb(200, 200, 200);
+  color: rgb(200, 200, 200);
   width: 800px;
   height: 550px;
   position: relative;
@@ -25,7 +25,6 @@
 #infobox {
   padding-left: 20px;
   padding-right: 20px;
-
 }
 
 .image-container {
@@ -38,24 +37,17 @@
   overflow: hidden;
 }
 
-
-
 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-
 .gh-chart {
   padding-top: 50px;
   padding-bottom: 50px;
   width: 100%;
   filter: invert(0.95) hue-rotate(270deg);
-}
-
-canvas.particles-js-canvas-el {
-  margin-top: -240px;
 }
 
 .about {
@@ -66,9 +58,6 @@ canvas.particles-js-canvas-el {
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* 
-  background-color: #282c34; 
-  */
   font-size: 5em;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -78,7 +67,6 @@ canvas.particles-js-canvas-el {
   font-size: 80px;
   height: 0px;
   color: #FFFFFF;
-
 }
 
 .about .prompt {
@@ -88,40 +76,40 @@ canvas.particles-js-canvas-el {
   width: 100%;
   font-size: 30px;
 }
+
 .prompt svg {
   font-size: 30px;
   margin: 5px;
   color: rgb(200, 200, 200);
 }
 
-.skills {
-  font-size: 35px;
+/* Wave and Content Overlay Styles */
+.wave-and-content {
+  position: relative;
   width: 100%;
+  height: 220px; /* Adjust as needed */
+}
+
+.WaveComponent canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Behind the content */
+}
+
+.overlay-content {
+  position: relative;
+  bottom: 150px;
+  z-index: 2; /* Above the wave */
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 
-.skills h1 {
-  color: #3e497a;
-}
-
-.WaveContainer {
-  
-}
-
-
-
-.skills .list {
-  list-style: none;
-  width: 60%;
-}
-
-.list span {
-  font-size: 20px;
-}
-
+/* Responsive Design */
 @media only screen and (max-width: 600px) {
   .about h2 {
     font-size: 40px;
@@ -135,18 +123,6 @@ canvas.particles-js-canvas-el {
 
   .about-container {
     max-width: 100%;
-
-  }
-
-  .skills {
-    text-align: center;
-  }
-  .list {
-    padding: 0;
-  }
-
-  .skills h2 {
-    font-size: 30px;
   }
 
   .image-container {
@@ -154,4 +130,3 @@ canvas.particles-js-canvas-el {
     height: 200px;
   }
 }
-
