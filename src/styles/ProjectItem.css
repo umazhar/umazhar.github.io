@@ -1,12 +1,12 @@
 .projectItem {
     display: flex;
+    flex-direction: column;
     width: 100%;
     background-color: #181818;
     color: white;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    cursor: pointer;
     transition: all 0.2s ease-in-out;
     font-size: 15px;
     box-sizing: border-box;
@@ -17,7 +17,7 @@
 }
 
 .projectItem .bgImage {
-    flex-grow: 1;
+    flex-grow: 0.7;
     flex-basis: 0;
     background-size: cover;
     background-position: center;
@@ -35,6 +35,8 @@
 }
 
 .projectItem .description {
+    display: flex;
+    flex-direction: column;
     flex-grow: 2;
     flex-basis: 0;
     /* Add padding or margin if needed */
@@ -43,3 +45,22 @@
 .projectItem h1, .projectItem p {
     margin: 0;
 }
+
+.technology-bubble {
+    border: 1px solid black; /* Add a border */
+    padding: 6px; /* Add some padding */
+    margin: 2px; /* Add some margin */
+    background-color: rgb(64, 168, 181); /* Add a background color */
+    border-radius: 9px; /* Add rounded corners */
+    display: inline-block; /* Display the boxes side by side */
+    color: white;
+  }
+
+  .technologies {
+    flex-grow: 0; /* Prevent it from expanding */
+    margin-top: auto; /* Push it to the bottom */
+    padding-top: 5px;
+    /* ... other styles ... */
+}
+
+  

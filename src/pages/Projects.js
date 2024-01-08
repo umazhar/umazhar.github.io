@@ -17,6 +17,7 @@ function Projects() {
               name={project.name}
               image={project.image}
               description={project.description}
+              technologies={project.technologies}
             />
           );
         })}

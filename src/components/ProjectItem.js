@@ -2,8 +2,18 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/ProjectItem.css";
 
-function ProjectItem({ image, name, id, description }) {
+function ProjectItem({ image, name, id, description, technologies }) {
   // const navigate = useNavigate();
+
+  const renderTechnologies = () => {
+    if (typeof technologies === 'string') {
+      return technologies.split(', ').map((tech, index) => (
+        <span key={index} className="technology-bubble">{tech}</span>
+      ));
+    }
+    return null;
+  };
+
 
   return (
     <div
@@ -31,6 +41,9 @@ function ProjectItem({ image, name, id, description }) {
             );
           }
         })}</p>
+        <div className = "technologies">
+          {renderTechnologies()}
+        </div>
       </div>
     </div>
   );
