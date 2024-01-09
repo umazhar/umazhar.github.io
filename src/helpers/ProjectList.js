@@ -44,7 +44,7 @@ export const ProjectList = [
   {
     name: "Password Manager",
     image: missing,
-    description: "Very insecure. Great way to lose your bank account info.",
+    description: "Very insecure. Passwords are stored in a JSON xddd",
     technologies: "Java, Swing, JUnit, JSON"
   },
 
