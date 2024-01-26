@@ -7,6 +7,7 @@ import amd from "../assets/amd.jpeg";
 import eworx from "../assets/eworx.jpeg";
 import dbot from "../assets/dbot.png";
 import bigleaf from "../assets/bigleaf.png";
+import intel from "../assets/intel.png"
 
 function Experience() {
   return (

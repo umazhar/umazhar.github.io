@@ -4,9 +4,15 @@ class Wave {
     this.info = config.info || {};
     this.info.seconds = config.infoSeconds || 0;
     this.info.time = config.infoTime || 0;
-    this.animationFrame = config.animationFrame || .014;
-    this.canvas = config.el || document.createElement('canvas');
-    this.colorList = config.colorList || ['#0ff', '#ff0', '#f00', '#00f', '#f0f'];
+    this.animationFrame = config.animationFrame || 0.014;
+    this.canvas = config.el || document.createElement("canvas");
+    this.colorList = config.colorList || [
+      "#0ff",
+      "#ff0",
+      "#f00",
+      "#00f",
+      "#f0f",
+    ];
     this.opacity = config.opacity || [0.8, 0.5, 0.3, 0.2, 0.8];
     this.zoom = config.zoom || [3, 4, 1.6, 3, 2];
     this.startPosition = config.startPosition || [0, 0, 0, 100, 0];
@@ -16,7 +22,8 @@ class Wave {
     this.stroke = config.stroke !== undefined ? config.stroke : true;
     this.fill = config.fill !== undefined ? config.fill : false;
 
-    this.canvas.width = config.canvasWidth || document.documentElement.clientWidth;
+    this.canvas.width =
+      config.canvasWidth || document.documentElement.clientWidth;
     this.canvas.height = config.canvasHeight || 200;
     this.canvas.contextCache = this.canvas.getContext("2d");
 
@@ -29,15 +36,25 @@ class Wave {
 
     this.info.seconds = this.info.seconds + this.animationFrame;
     this.info.time = this.info.seconds * Math.PI;
-    
+
     this.animationId = requestAnimationFrame(this.update.bind(this));
   }
-  
+
+  updateNoiseLevel(level) {
+    this.waveLength = level; 
+  }
+
   draw(canvas, color) {
     var context = canvas.contextCache;
     context.clearRect(0, 0, canvas.width, canvas.height);
-    for (let i = 0; i < this.colorList.length; i++){
-      this.drawWave (canvas, color[i], this.opacity[i], this.zoom[i], this.startPosition[i]);
+    for (let i = 0; i < this.colorList.length; i++) {
+      this.drawWave(
+        canvas,
+        color[i],
+        this.opacity[i],
+        this.zoom[i],
+        this.startPosition[i]
+      );
     }
   }
 
@@ -63,22 +80,26 @@ class Wave {
       context.fill();
     }
   }
-
   drawSine(canvas, t, zoom, delay, color) {
     var context = canvas.contextCache;
     var length = canvas.width;
-    var harmonics = 8;
-    var amplitudeScale = 1 + Math.random() * 1; // Adding random scaling to amplitude
+    var harmonics = 10; // Adjusted number of harmonics for balance
+    var amplitudeNoiseFactor = 0.05; // Controlled randomness in amplitude
+    var wavelengthNoiseFactor = 0.02; // Controlled randomness in wavelength
 
     for (let x = 0; x <= length; x += 1) {
       let y = 0;
 
       for (let n = 1; n <= harmonics; n++) {
-        let waveLength = length / (n + Math.random()); // Adding randomness to wavelength
-        y += (1 / n) * Math.sin(2 * Math.PI * n * (x / waveLength + t / zoom - delay));
+        let randomFactor = 1 + Math.random() * wavelengthNoiseFactor;
+        let waveLength = (length / (n * 1.5)) * randomFactor;
+        y +=
+          (1 / n) *
+          Math.sin(2 * Math.PI * n * (x / waveLength + t / zoom - delay));
       }
 
-      y *= amplitudeScale;
+      let amplitudeRandomness = 1 + Math.random() * amplitudeNoiseFactor;
+      y *= amplitudeRandomness;
       let yPos = this.unit * y + this.xAxis;
       if (x === 0) {
         context.moveTo(x, yPos);
@@ -86,8 +107,9 @@ class Wave {
         context.lineTo(x, yPos);
       }
     }
+  }
 
-  }
-  }
+
+}
 
 export default Wave;

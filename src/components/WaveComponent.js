@@ -1,14 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Wave from '../assets/waving.js';
 
 const WaveComponent = () => {
   const canvasRef = useRef(null);
+  const [isMouseDown, setIsMouseDown] = useState(false); // Track mouse press state
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const viewportHeight = document.documentElement.clientHeight; // Get the viewport height
+    const viewportHeight = document.documentElement.clientHeight;
 
-    new Wave({
+    const wave = new Wave({
       unit: 100,
       info: {
         infoSeconds: 0,
@@ -28,6 +29,28 @@ const WaveComponent = () => {
       canvasWidth: document.documentElement.clientWidth,
       canvasHeight: viewportHeight, // Set the canvas height to viewport height
     });
+
+    // Event listener for mouse down
+    const handleMouseDown = () => {
+      setIsMouseDown(true);
+      wave.updateNoiseLevel(0); // Set to 0 or your desired low noise level
+    };
+
+    // Event listener for mouse up
+    const handleMouseUp = () => {
+      setIsMouseDown(false);
+      wave.updateNoiseLevel(1); // Reset to original noise level
+    };
+
+    // Adding event listeners
+    window.addEventListener('mousedown', handleMouseDown);
+    window.addEventListener('mouseup', handleMouseUp);
+
+    return () => {
+      // Remove event listeners on cleanup
+      window.removeEventListener('mousedown', handleMouseDown);
+      window.removeEventListener('mouseup', handleMouseUp);
+    };
   }, []);
 
   return <canvas ref={canvasRef} />;
