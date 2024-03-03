@@ -3,53 +3,56 @@ import Wave from '../assets/waving.js';
 
 const WaveComponent = () => {
   const canvasRef = useRef(null);
-  const [isMouseDown, setIsMouseDown] = useState(false); // Track mouse press state
+  const [isMouseDown, setIsMouseDown] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    const viewportWidth = document.documentElement.clientWidth;
     const viewportHeight = document.documentElement.clientHeight;
 
+    // Adjust wave properties based on screen width
+    const isMobile = viewportWidth < 768; // Example breakpoint for mobile devices
+    const zoom = isMobile ? [3, 4, 1] : [3, 4, 1.6];
+    const unit = isMobile ? 50 : 100; // Smaller unit size for mobile
+    const lineWidth = isMobile ? 0.6 : 0.7;
+
     const wave = new Wave({
-      unit: 100,
+      unit: unit,
       info: {
         infoSeconds: 0,
         infoTime: 1,
       },
       animationFrame: 0.001,
-      timeoutSecond: 35,
       el: canvas,
-      colorList: ['#128A88', '#c842f5', '#18d3d6'],
-      opacity: [0.3, 0.6, 0.4],
-      zoom: [3, 4, 1.6, 3, 2],
-      startPosition: [0, 0.23, 0.1],
-      lineWidth: 0.4,
-      xAxis: Math.floor(viewportHeight / 2), // Adjusting xAxis based on viewport height
+      // colorList: ['#128A88', '#c842f5', '#18d3d6'],
+      // opacity: [0.3, 0.6, 0.4],
+      // zoom: zoom,
+      // startPosition: [0, 0.23, 0.1],
+      lineWidth: lineWidth,
+      xAxis: Math.floor(viewportHeight / 2),
+      yAxis: -1,
       stroke: true,
       fill: false,
-      canvasWidth: document.documentElement.clientWidth,
-      canvasHeight: viewportHeight, // Set the canvas height to viewport height
+      canvasWidth: viewportWidth,
+      canvasHeight: viewportHeight,
     });
 
-    // Event listener for mouse down
     const handleMouseDown = () => {
       setIsMouseDown(true);
-      wave.updateNoiseLevel(0); // Set to 0 or your desired low noise level
+      wave.updateNoiseLevel(0);
     };
 
-    // Event listener for mouse up
     const handleMouseUp = () => {
       setIsMouseDown(false);
-      wave.updateNoiseLevel(1); // Reset to original noise level
+      wave.updateNoiseLevel(1);
     };
 
-    // Adding event listeners
-    window.addEventListener('mousedown', handleMouseDown);
-    window.addEventListener('mouseup', handleMouseUp);
+    canvas.addEventListener('mousedown', handleMouseDown);
+    canvas.addEventListener('mouseup', handleMouseUp);
 
     return () => {
-      // Remove event listeners on cleanup
-      window.removeEventListener('mousedown', handleMouseDown);
-      window.removeEventListener('mouseup', handleMouseUp);
+      canvas.removeEventListener('mousedown', handleMouseDown);
+      canvas.removeEventListener('mouseup', handleMouseUp);
     };
   }, []);
 

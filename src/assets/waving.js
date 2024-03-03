@@ -83,23 +83,17 @@ class Wave {
   drawSine(canvas, t, zoom, delay, color) {
     var context = canvas.contextCache;
     var length = canvas.width;
-    var harmonics = 10; // Adjusted number of harmonics for balance
-    var amplitudeNoiseFactor = 0.05; // Controlled randomness in amplitude
-    var wavelengthNoiseFactor = 0.02; // Controlled randomness in wavelength
-
+    var harmonics = 20; // Number of harmonics to include in the series
+  
     for (let x = 0; x <= length; x += 1) {
       let y = 0;
-
-      for (let n = 1; n <= harmonics; n++) {
-        let randomFactor = 1 + Math.random() * wavelengthNoiseFactor;
-        let waveLength = (length / (n * 1.5)) * randomFactor;
-        y +=
-          (1 / n) *
-          Math.sin(2 * Math.PI * n * (x / waveLength + t / zoom - delay));
+  
+      // Summing over odd harmonics (1, 3, 5, ...)
+      for (let n = 1; n <= harmonics; n += 1) {
+        let waveLength = length / n;
+        y += (6 / (n * Math.PI)) * Math.sin(2 * Math.PI * n * (x / waveLength + t / zoom - delay));
       }
-
-      let amplitudeRandomness = 1 + Math.random() * amplitudeNoiseFactor;
-      y *= amplitudeRandomness;
+  
       let yPos = this.unit * y + this.xAxis;
       if (x === 0) {
         context.moveTo(x, yPos);
@@ -108,8 +102,10 @@ class Wave {
       }
     }
   }
+  
 
 
 }
 
 export default Wave;
+
