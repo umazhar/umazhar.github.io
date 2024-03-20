@@ -19,7 +19,7 @@ function Experience() {
       <ExperienceItem
         logoSrc={amd}
         jobTitle="AMD"
-        jobDescription="Design Verification Engineer Intern | May 2023 - Aug 2024"
+        jobDescription="Design Verification Engineer Intern | May 2024 - Aug 2024"
         link="https://www.amd.com/en.html"
         skills={["SystemVerilog", "C++", "Synopsys Verdi"]}
       />
