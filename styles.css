@@ -1,0 +1,164 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px; /* Adjust the size as needed */
+    margin: 0;
+    font-weight: normal;
+}
+
+.menulink:hover {
+    text-decoration: underline;
+}
+
+
+
+header h2 {
+    margin: 0;
+    color: grey;
+    font-weight: 80;
+}
+
+header h4 {
+    color: gray;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    color: #333;
+    font-size: 0.8em;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+
+code,
+pre,
+kbd,
+samp {
+  font-family: "Inconsolata", monospace;
+  font-size: 0.95em;
+}
+
+a {
+    color: var(--primary-color); /* Use the primary color variable */
+    text-decoration: underline; /* Always underline links */
+  }
+  
+  a:hover {
+    text-decoration: none; /* This can remain if you want to ensure consistency or add other styles like a color change */
+  }
+  
+
+
+main {
+  margin: 0.5em 0;
+}
+
+figure {
+    text-align: center; /* Center the image and caption */
+    margin: 20px 0; /* Add some spacing around the figure element */
+}
+
+figcaption {
+    font-size: 0.8em; /* Smaller font size for the caption */
+    color: #666; /* A lighter color for the caption text */
+}
+
+
+
+
+/* Experience section styles */
+.experience-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.experience-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.company-role {
+  .footer-content {
+    text-align: center; /* Center horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    height: 100%;
+  }
+
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.company {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.details {
+  margin-left: 10px; /* Adjust the margin as needed */
+}
+
+.role,
+.date {
+  margin: 0; /* Remove any default margins */
+}
+
+.date {
+  font-size: 0.9em;
+  color: var(--text-color); /* Use the text color variable */
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+}
+
+small {
+  color: #777;
+}
+
+.footer-content {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100%;
+}
+
