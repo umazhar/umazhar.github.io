@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Umair Mazhar</title>
+    <link rel="icon" type="image/x-icon" href="/assets/black.jpeg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      // JavaScript for handling dark mode toggle
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.querySelector("#dark-mode-toggle");
+        // Set default mode to dark if not already set
+        if (!localStorage.getItem("darkMode")) {
+          localStorage.setItem("darkMode", "dark");
+        }
+        const currentMode = localStorage.getItem("darkMode");
+        document.body.classList.toggle("dark", currentMode === "dark");
+        toggle.innerHTML = currentMode === "dark" ? "🌞" : "🌜";
+
+        toggle.addEventListener("click", () => {
+          document.body.classList.toggle("dark");
+          const isDark = document.body.classList.contains("dark");
+          localStorage.setItem("darkMode", isDark ? "dark" : "light");
+          toggle.innerHTML = isDark ? "🌞" : "🌜";
+        });
+      });
+    </script>
+  </head>
+  <body class="dark">
+    <!-- Ensures dark mode class is set on body initially -->
+    <div class="container">
+      <header>
+        <br /><br />
+        <h1>Umair Mazhar</h1>
+        <h2>Vancouver, BC</h2>
+        <br />
+        <nav>
+          <div class="nav-links">
+            <a class="menulink" href="index.html">Home</a> |
+            <a class="menulink" href="resume.html">Resume</a> |
+            <a class="menulink" href="projects.html">Projects</a>
+          </div>
+          <button id="dark-mode-toggle" class="dark-mode-button">🔦</button>
+        </nav>
+        <hr />
+      </header>
+      <main class="centered-content">
+        <figure>
+            <img src="assets/underconstruction_sign.gif" alt="Under Construction Sign">
+            <img src="assets/underconstruction.gif" alt="Under Construction">
+        </figure>
+    </main>
+        </div>
+    <footer>
+      <p>&copy; 2024 Umair Mazhar</p>
+    </footer>
+  </body>
+</html>

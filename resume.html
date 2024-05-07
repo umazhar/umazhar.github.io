@@ -1,83 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Umair Mazhar</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/black.jpeg">
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const toggle = document.querySelector('#dark-mode-toggle');
+          const logos = document.querySelectorAll('.amd-logo');
+          const updateLogos = (useDark) => {
+            logos.forEach(logo => {
+              logo.src = useDark ? 'assets/amd_green.jpeg' : 'assets/amd.jpeg';
+            });
+          };
+      
+          let darkMode = localStorage.getItem('darkMode') === 'dark';
+          document.body.classList.toggle('dark', darkMode);
+          updateLogos(darkMode);
+          toggle.innerHTML = darkMode ? '🌞' : '🌜';
+      
+          toggle.addEventListener('click', () => {
+            darkMode = !darkMode;
+            document.body.classList.toggle('dark', darkMode);
+            localStorage.setItem('darkMode', darkMode ? 'dark' : 'light');
+            toggle.innerHTML = darkMode ? '🌞' : '🌜';
+            updateLogos(darkMode);
+          });
+        });
+      </script>
+                          </head>
+  <body>
     <div class="container">
-        <header>
-            <br><br>
-            <h1>Umair Mazhar</h1>
-            <h2>Vancouver, BC</h2>
-            <br>
-            <nav>
-                <a href="index.html">Home</a> | 
-                <a href="resume.html">Resume</a>
-            </nav>
-            <hr />
-        </header>
-        <main>
-            <p><b>[Education]</b></p>
-            <li class="experience-item">
-                <div class="experience-details">
-                  <div class="company">University of British Columbia</div>
-                  <div class="details">
-                    <div class="role">BASc. in Electrical Engineering</div>
-                    <div class="date">Sep 2020 - Apr 2025</div>
-                  </div>
-                </div>
-              </li>
+      <header>
+        <br /><br />
+        <h1>Umair Mazhar</h1>
+        <h2>Vancouver, BC</h2>
+        <br />
+        <nav>
+            <div class="nav-links">
+                <a class="menulink" href="index.html">Home</a> | 
+                <a class="menulink" href="resume.html">Resume</a> |
+                <a class="menulink" href="projects.html">Projects</a> 
+            </div>
+            <button id="dark-mode-toggle" class="dark-mode-button">🔦</button>
+    </nav>
+        <hr />
+      </header>
+      <main>
+        <p><b>[Education]</b></p>
+        <li class="experience-item">
+          <div class="experience-details">
+            <div class="company">University of British Columbia</div>
+            <div class="details">
+              <div class="role">BASc. in Electrical Engineering</div>
+              <div class="date">Sep 2020 - Apr 2025</div>
+            </div>
+          </div>
+        </li>
+        <p><b>[Experience]</b></p>
+        <ul class="experience-list">
+          <li class="experience-item">
+            <img src="assets/amd.jpeg" alt="AMD" class="amd-logo" />
+            <div class="experience-details">
+              <div class="company">AMD:</div>
+              <div class="details">
+                <div class="role">Design Verification Engineer Co-op</div>
+                <div class="date">May 2024 - Aug 2024</div>
+              </div>
+            </div>
+          </li>
+          <li class="experience-item">
+            <img src="assets/amd.jpeg" alt="AMD" class="amd-logo" />
+            <div class="experience-details">
+              <div class="company">AMD:</div>
+              <div class="details">
+                <div class="role">RTL Design Engineer Co-op</div>
+                <div class="date">Sep 2023 - May 2024</div>
+              </div>
+            </div>
+          </li>
+          <li class="experience-item">
+            <img src="assets/jostle.jpeg" alt="jostle" />
+            <div class="experience-details">
+              <div class="company">Jostle:</div>
+              <div class="details">
+                <div class="role">Junior Developer Co-op</div>
+                <div class="date">Jan 2023 - Aug 2023</div>
+              </div>
+            </div>
+          </li>
+          <li class="experience-item">
+            <img src="assets/dbot.png" alt="designbot" />
+            <div class="experience-details">
+              <div class="company">DesignBot:</div>
+              <div class="details">
+                <div class="role">Software Engineer [Contract, part-time</div>
+                <div class="date">Jan 2023 - May 2023</div>
+              </div>
+            </div>
+          </li>
+          <li class="experience-item">
+            <img src="assets/eworx.jpeg" alt="eworx" />
+            <div class="experience-details">
+              <div class="company">eWorx:</div>
+              <div class="details">
+                <div class="role">Software Engineer Intern</div>
+                <div class="date">Jun 2022 - Sep 2022</div>
+              </div>
+            </div>
+          </li>
+          <li class="experience-item">
+            <img src="assets/bigleaf.png" alt="bigleaf" />
+            <div class="experience-details">
+              <div class="company">The Big Leaf:</div>
+              <div class="details">
+                <div class="role">Software Engineer Intern [Contract, part-time]</div>
+                <div class="date">May 2022 - Jun 2022</div>
+              </div>
+            </div>
+          </li>
 
-            <p><b>[Experience]</b></p>
-            <!-- ... Rest of your HTML code ... -->
-            <ul class="experience-list">
-              <li class="experience-item">
-                <div class="experience-details">
-                  <div class="company">AMD:</div>
-                  <div class="details">
-                    <div class="role">Design Verification Engineer Co-op</div>
-                    <div class="date">May 2024 - Aug 2024</div>
-                  </div>
-                </div>
-              </li>
-              <li class="experience-item">
-                <div class="experience-details">
-                  <div class="company">AMD:</div>
-                  <div class="details">
-                    <div class="role">RTL Design Engineer Co-op</div>
-                    <div class="date">Sep 2023 - May 2024</div>
-                  </div>
-                </div>
-              </li>
-              <li class="experience-item">
-                <div class="experience-details">
-                  <div class="company">Jostle:</div>
-                  <div class="details">
-                    <div class="role">Junior Developer Co-op</div>
-                    <div class="date">Jan 2023 - Aug 2023</div>
-                  </div>
-                </div>
-              </li>
-
-              <li class="experience-item">
-                <div class="experience-details">
-                  <div class="company">eWorx:</div>
-                  <div class="details">
-                    <div class="role">Software Engineer Intern</div>
-                    <div class="date">Jun 2022 - Sep 2022</div>
-                  </div>
-                </div>
-              </li>
-              
-              <!-- Add more companies and roles as needed -->
-            </ul>
-        </main>
+        </ul>
+      </main>
     </div>
-        <footer>
-        <p>&copy; 2024 Umair Mazhar</p>
+    <footer>
+      <p>&copy; 2024 Umair Mazhar</p>
     </footer>
-</body>
+  </body>
 </html>
