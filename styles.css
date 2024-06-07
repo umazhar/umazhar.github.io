@@ -20,13 +20,13 @@ h1 {
     text-decoration: underline;
 }
 
-
-
 body.dark img.amd-logo {
     filter: none; /* Removes any filters applied globally to images in dark mode */
 }
 
-
+.microchip-logo {
+    overflow: visible;
+}
 
 header h2 {
     margin: 0;
@@ -42,8 +42,6 @@ nav a {
     color: black;
     text-decoration: none;
 }
-
-
 
 main img {
     width: 100%;
@@ -81,10 +79,6 @@ button.dark-mode-toggle {
     color: inherit; /* Inherits color from parent */
 }
 
-
-
-
-
 code,
 pre,
 kbd,
@@ -96,13 +90,11 @@ samp {
 a {
     color: var(--primary-color); /* Use the primary color variable */
     text-decoration: underline; /* Always underline links */
-  }
+}
   
-  a:hover {
+a:hover {
     text-decoration: none; /* This can remain if you want to ensure consistency or add other styles like a color change */
-  }
-  
-
+}
 
 main {
   margin: 0.5em 0;
@@ -140,8 +132,6 @@ main {
     color: #666;  /* Consistent text color, adjust as needed */
 }
 
-
-
 figure {
     text-align: center; /* Center the image and caption */
     margin: 20px 0; /* Add some spacing around the figure element */
@@ -152,101 +142,50 @@ figcaption {
     color: #666; /* A lighter color for the caption text */
 }
 
-
-
-
-/* Experience section styles */
 .experience-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-/* Default light mode styles remain the same */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    max-width: 650px;
-    margin: auto;
-    padding: 20px;
-}
-
-h1 {
-    font-size: 36px;
-    margin: 0;
-    font-weight: normal;
-}
-
-nav a {
-    color: black;
-    text-decoration: none;
-}
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-    color: #333;
-    font-size: 0.8em;
-}
-
-.experience-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
 .experience-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-/* Dark mode styles */
 body.dark {
-    background-color: #121212;
-    color: #e0e0e0;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 body.dark nav a {
-    color: #e0e0e0;
+  color: #e0e0e0;
 }
 
 body.dark footer {
-    color: #e0e0e0;
+  color: #e0e0e0;
 }
 
 button.dark-mode-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5em;
-    margin-left: 10px;
-    font-size: 1em; 
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 10px;
 }
 
-
 .experience-item {
-    display: flex;
-    align-items: center; /* Centers the items vertically */
-    margin-bottom: 20px; /* Adds some space between each item */
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .experience-item img {
-    width: 40px; /* Sets a fixed width for the image */
-    height: 40px; /* Sets a fixed height for the image */
-    margin-right: 20px; /* Adds some space between the image and the details */
-    object-fit: cover; /* Ensures the image covers the fixed dimensions without distortion */
-}
-
-.experience-details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  object-fit: cover;
 }
 
 .experience-details {
@@ -256,14 +195,6 @@ button.dark-mode-button {
 }
 
 .company-role {
-  .footer-content {
-    text-align: center; /* Center horizontally */
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Center vertically */
-    height: 100%;
-  }
-
   font-weight: bold;
   margin-right: 10px;
 }
@@ -302,5 +233,50 @@ small {
   justify-content: center;
   align-items: center; 
   height: 100%;
+}
+
+/* Dropdown styles */
+.dropdown {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.dropdown .arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.dropdown .arrow.down {
+  transform: rotate(45deg);
+}
+
+.dropdown .arrow.open {
+  transform: rotate(-135deg);
+}
+
+.dropdown p {
+  margin: 0;
+  font-weight: bold;
+}
+
+body.dark .dropdown .arrow {
+  border-color: #e0e0e0;
+}
+
+.hidden {
+  display: none;
+}
+
+.experience-logo {
+  max-width: 100px; /* Adjust this value as needed */
+  max-height: 60px; /* Adjust this value as needed */
+  object-fit: contain;
+  margin-right: 20px; /* Adjust this value as needed */
 }
 

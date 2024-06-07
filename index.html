@@ -6,6 +6,7 @@
     <title>Umair Mazhar</title>
     <link rel="icon" type="image/x-icon" href="/assets/black.jpeg">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script>
       // JavaScript for handling dark mode toggle
       document.addEventListener('DOMContentLoaded', () => {
@@ -26,6 +27,32 @@
         });
       });
     </script>
+    <style>
+      .social-icons ul {
+        list-style: none;
+        padding: 0;
+      }
+      .social-icons li {
+        margin: 10px 0;
+      }
+      .social-icons a {
+        margin-right: 10px;
+        color: #333;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      .social-icons a:hover {
+        color: #e0e0e0; /* Change this color to match the respective social media brand colors */
+        text-decoration: underline;
+
+    }
+      body.dark .social-icons a {
+        color: #fff;
+      }
+      body.dark .social-icons a:hover {
+        color: #e0e0e0; /* Change this color to match the respective social media brand colors */
+      }
+    </style>
 </head>
 <body class="dark"> <!-- Ensures dark mode class is set on body initially -->
     <div class="container">
@@ -52,13 +79,18 @@
             
             <p>Electrical engineering student @ <b>UBC.</b></p>
             <p>Interests include digital design, computer architecture, design verification, and intersections of hardware and software systems.</p>
+            <p> I have over 28 months of fulltime co-op work experience in various domains and am hoping to enter the semiconductor industry upon graduation. </p>
             <p>When I am not working or studying, I enjoy hiking, backpacking, mountain biking, reading, and working on interesting projects.</p>
             Find me:<br>
-            <a href="https://www.linkedin.com/in/umazhar/">LinkedIn</a> <br>
-            <a href="https://github.com/umazhar">GitHub</a> <br>
-            <a href="https://www.instagram.com/coolmathgames.ca">Instagram</a> <br>
-            <a href="https://twitter.com/umair_mz">Twitter</a> <br>
-            <a href="mailto:u.mazhar@icloud.com">Email</a> <br>
+            <div class="social-icons">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/umazhar/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://github.com/umazhar" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="https://www.instagram.com/coolmathgames.ca" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://twitter.com/umair_mz" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="mailto:u.mazhar@icloud.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i> Email</a></li>
+                </ul>
+            </div>
         </main>
     </div>
     <footer>
