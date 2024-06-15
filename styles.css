@@ -115,21 +115,15 @@ main {
     text-align: center;
 }
 
-.centered-content figure img:first-of-type {
-    width: 100%;  /* Makes the first image larger relative to the container */
-    height: auto;
-    margin-bottom: 20px; /* Provides spacing between the two images */
-}
-
-.centered-content figure img:last-of-type {
-    width: 60%;  /* Adjust based on your preference for the size of the second image */
-    height: auto;
-}
-
 .centered-content figcaption {
     margin-top: 20px;  /* Spacing between the lower image and text */
     font-size: 1.5em;  /* Enhances visibility with larger text */
     color: #666;  /* Consistent text color, adjust as needed */
+}
+
+.small-gif {
+  width: 75%; /* Adjust the size as needed */
+  height: auto;
 }
 
 figure {
@@ -273,10 +267,4 @@ body.dark .dropdown .arrow {
   display: none;
 }
 
-.experience-logo {
-  max-width: 100px; /* Adjust this value as needed */
-  max-height: 60px; /* Adjust this value as needed */
-  object-fit: contain;
-  margin-right: 20px; /* Adjust this value as needed */
-}
 

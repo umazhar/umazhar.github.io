@@ -26,6 +26,18 @@
         });
       });
     </script>
+    <style>
+      .inline-images {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .inline-images img {
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+      }
+    </style>
   </head>
   <body class="dark">
     <!-- Ensures dark mode class is set on body initially -->
@@ -40,18 +52,23 @@
             <a class="menulink" href="/">Home</a> | 
             <a class="menulink" href="./resume">Resume</a> |
             <a class="menulink" href="./projects">Projects</a> 
-  </div>
+          </div>
           <button id="dark-mode-toggle" class="dark-mode-button">🔦</button>
         </nav>
         <hr />
       </header>
       <main class="centered-content">
         <figure>
-            <img src="assets/underconstruction_sign.gif" alt="Under Construction Sign">
-            <img src="assets/underconstruction.gif" alt="Under Construction">
+            <div class="inline-images">
+              <img src="assets/stop.gif" alt="Stop Sign">
+              <h2>Page under construction</h2>
+              <img src="assets/stop.gif" alt="Stop Sign">
+            </div>
+            <img src="assets/underconstruction.gif" alt="Under Construction" class="small-gif">
+            <h4>Please check back soon...</h4>
         </figure>
-    </main>
-        </div>
+      </main>
+    </div>
     <footer>
       <p>&copy; 2024 Umair Mazhar</p>
     </footer>
