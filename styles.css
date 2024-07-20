@@ -283,3 +283,7 @@ body.dark .ubc-logo {
   filter: brightness(0) invert(1);
   overflow: visible;
 }
+
+.ubc-logo-container {
+  overflow: visible;
+}
