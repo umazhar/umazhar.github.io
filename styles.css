@@ -267,4 +267,15 @@ body.dark .dropdown .arrow {
   display: none;
 }
 
+body.dark .subbots-logo {
+  filter: invert(1);
+}
 
+.ubc-logo {
+  overflow: visible;
+}
+
+body.dark .ubc-logo {
+  filter: brightness(0) invert(1);
+  overflow: visible;s
+}
