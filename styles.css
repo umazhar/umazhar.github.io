@@ -276,11 +276,7 @@ body.dark .subbots-logo {
 }
 
 .ubc-logo {
-  display: block;
-  max-width: 100px; /* Adjust as needed */
-  max-height: 100px; /* Adjust as needed */
-  object-fit: contain;
-  margin-right: 10px;
+  overflow: visible;
 }
 
 body.dark .ubc-logo {
