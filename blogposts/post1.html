@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Umair Mazhar Blog</title>
-    <link rel="icon" type="image/x-icon" href="/assets/black.jpeg" />
-    <link rel="stylesheet" href="styles.css" />
+    <title>The Pacific Coast Highway Road Trip</title>
+    <link rel="stylesheet" href="../styles.css" />
     <script>
       // JavaScript for handling dark mode toggle
       document.addEventListener("DOMContentLoaded", () => {
         const toggle = document.querySelector("#dark-mode-toggle");
-        // Set default mode to dark if not already set
         if (!localStorage.getItem("darkMode")) {
           localStorage.setItem("darkMode", "dark");
         }
@@ -27,7 +25,7 @@
       });
     </script>
   </head>
-  <body class="dark">
+  <body>
     <div class="container">
       <header>
         <br /><br />
@@ -37,24 +35,34 @@
         <nav>
           <div class="nav-links">
             <a class="menulink" href="/">Home</a> | 
-            <a class="menulink" href="./blog">Blog</a> 
+            <a class="menulink" href="../blog">Blog</a> 
           </div>
           <button id="dark-mode-toggle" class="dark-mode-button">🔦</button>
         </nav>
         <hr />
       </header>
       <main>
-        <!-- Blog Entries Section -->
-        <section class="blog-entries">
-          <article class="blog-entry">
-            <h3><a href="/blogposts/post1.html">California Roadtrip</a></h3>
-            <p>
-              Two week long roadtrip to California from Vancouver
-            </p>
-            <span class="date">Published on: August 21, 2024</span>
-          </article>
-          <hr />
-        </section>
+        <article class="full-blog-post">
+          <h2>The Pacific Coast Highway Road Trip</h2>
+          <p class="post-date">Published on: August 23, 2024</p> <!-- Greyed out date -->
+
+          <p>
+            WIP.
+          </p>
+
+          <h3>Table of Contents</h3>
+          <ul>
+            <li><a href="#itinerary">Itinerary: Pacific Coast Highway Road Trip</a></li>
+            <li><a href="#washington">Washington</a></li>
+          </ul>
+
+          <h3 id="itinerary">Itinerary: Pacific Coast Highway Road Trip</h3>
+
+          <h3 id="washington">Washington</h3>
+          <p>
+            We started here. 
+          </p>
+        </article>
       </main>
     </div>
     <footer>

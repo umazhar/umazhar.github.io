@@ -287,3 +287,62 @@ body.dark .ubc-logo {
 .ubc-logo-container {
   overflow: visible;
 }
+
+/* Blog Entries Section */
+.blog-entries {
+  margin: 20px 0;
+}
+
+.blog-entry {
+  margin-bottom: 30px; /* Increased spacing between entries */
+  padding-bottom: 15px; /* Increased padding at the bottom */
+}
+
+.blog-entry h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: var(--primary-color);
+}
+
+.blog-entry h3 a {
+  text-decoration: none; /* Removes underline from the title link by default */
+  color: inherit; /* Inherits the color from the h3 tag */
+}
+
+.blog-entry h3 a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+.blog-entry p {
+  margin: 10px 0; /* Adjusted margin for better spacing */
+}
+
+.blog-entry .date {
+  font-size: 0.9em;
+  color: grey;
+  display: block; /* Ensures the date is on its own line */
+  margin-top: -15px; /* Adjusted to make it look better on both desktop and mobile */
+  float: right; /* Aligns to the right */
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .blog-entry {
+      margin-bottom: 40px; /* Extra space between entries on mobile */
+      padding-bottom: 20px; /* Extra padding at the bottom on mobile */
+  }
+
+  .blog-entry .date {
+      margin-top: 5px; /* Align date below title and snippet on mobile */
+      float: none; /* Removes float so the date aligns naturally */
+      text-align: right; /* Align the date to the right */
+  }
+
+  .blog-entry h3 {
+      font-size: 1.3em; /* Slightly smaller title font on mobile */
+  }
+
+  .blog-entry p {
+      margin: 10px 0 15px; /* Increased bottom margin for spacing */
+  }
+}
