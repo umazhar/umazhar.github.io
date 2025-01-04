@@ -64,7 +64,7 @@
             <nav>
                 <div class="nav-links">
                     <a class="menulink" href="/">Home</a> | 
-                    <!-- <a class="menulink" href="./resume">Resume</a> | -->
+                    <a class="menulink" href="./resume">Resume</a> |
                     <a class="menulink" href="./blog">Blog</a>
                     <!-- <a class="menulink" href="./projects">Projects</a>  -->
                 </div>
@@ -96,5 +96,26 @@
     <footer>
         <p>&copy; 2024 Umair Mazhar</p>
     </footer>
+<!-- Masonry via CDN -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+<!-- Then your custom initialization script -->
+<script>
+  // Wait for DOM to load
+  document.addEventListener('DOMContentLoaded', function() {
+    var grid = document.querySelector('.grid');
+    
+    if (grid) {
+      new Masonry(grid, {
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item', 
+        percentPosition: true, 
+        gutter: 10 // optional space between items
+      });
+    }
+  });
+</script>
+
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Umair Mazhar</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/assets/black.jpeg" />
@@ -48,14 +48,14 @@
         <nav>
           <div class="nav-links">
             <a class="menulink" href="/">Home</a> | 
-            <!-- <a class="menulink" href="./resume">Resume</a> | -->
-            <a class="menulink" href="./blog">Blog</a> |
-            <!-- <a class="menulink" href="./projects">Projects</a>  -->
+            <a class="menulink" href="./resume">Resume</a> |
+            <a class="menulink" href="./blog">Blog</a>
           </div>
           <button id="dark-mode-toggle" class="dark-mode-button">🔦</button>
         </nav>
         <hr />
       </header>
+
       <main>
         <p><b>[Education]</b></p>
         <ul class="experience-list">
@@ -71,7 +71,8 @@
               </div>
             </div>
           </li>
-                  </ul>
+        </ul>
+
         <p><b>[Work Experience]</b></p>
         <ul class="experience-list">
           <li class="experience-item">
@@ -124,24 +125,104 @@
               </div>
             </div>
           </li>
-          <p><b>[Design Team Experience]</b></p>
-          <ul class="experience-list">
-            <li class="experience-item">
-              <img src="assets/subbots.png" alt="UBC Subbots" class="subbots-logo" />
-              <div class="experience-details">
-                <div class="company">UBC Subbots :</div>
-                <div class="details">
-                  <div class="role">Simulation / Electrical Team Member</div>
-                  <div class="date">May 2022 - Apr</div>
-                </div>
+        </ul>
+
+        <p><b>[Design Team Experience]</b></p>
+        <ul class="experience-list">
+          <li class="experience-item">
+            <img src="assets/subbots.png" alt="UBC Subbots" class="subbots-logo" />
+            <div class="experience-details">
+              <div class="company">UBC Subbots :</div>
+              <div class="details">
+                <div class="role">Simulation / Electrical Team Member</div>
+                <div class="date">May 2022 - Apr 2023</div>
               </div>
-            </li>
-  
+            </div>
+          </li>
+        </ul>
+
+        <!-- OTHER WORK EXPERIENCE -->
+        <p><b>[Other Work Experience]</b></p>
+        <ul class="experience-list">
+          <!-- Non-contract roles under "Other Work Experience" -->
+          <li class="experience-item">
+            <img
+              src="assets/telus.png"
+              alt="Telus"
+              style="object-fit: contain;"
+              class="experience-logo"
+            />
+            <div class="experience-details">
+              <div class="company">Telus World of Science Edmonton:</div>
+              <div class="details">
+                <div class="role">Guest Service Representative</div>
+                <div class="date">Jul 2018 - Aug 2019</div>
+              </div>
+            </div>
+          </li>
+          <li class="experience-item">
+            <img
+              src="assets/telus.png"
+              alt="Telus"
+              style="object-fit: contain;"
+              class="experience-logo"
+            />
+            <div class="experience-details">
+              <div class="company">Telus World of Science Edmonton:</div>
+              <div class="details">
+                <div class="role">Assistant Science Camp Leader</div>
+                <div class="date">Jul 2016 - Jun 2018</div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Subcategory (toggle) for all contract/part-time roles -->
           <div class="dropdown" id="contract-toggle">
-            <p><b>[Other Experience]</b></p>
+            <p><b>[Contract &amp; Part-Time Roles]</b></p>
             <i class="arrow down"></i>
           </div>
           <ul id="contract-list" class="hidden experience-list">
+            <!-- Sorted newest (top) to oldest (bottom) based on start date -->
+            <!-- 1) Alvia Systems Inc: Dec 2024 - Jan 2025 -->
+            <li class="experience-item">
+              <img
+                src="assets/alvia_systems_logo-removebg-preview.png"
+                alt="Alvia Systems Inc"
+              />
+              <div class="experience-details">
+                <div class="company">Alvia Systems:</div>
+                <div class="details">
+                  <div class="role">R&amp;D Drone Project</div>
+                  <div class="date">Dec 2024 - Jan 2025 [Contract, Part-time]</div>
+                </div>
+              </div>
+            </li>
+            <!-- 2) Revyl AI: Sep 2024 - Oct 2024 -->
+            <li class="experience-item">
+              <img
+                src="assets/revylai_logo-removebg-preview.png"
+                alt="Revyl AI"
+              />
+              <div class="experience-details">
+                <div class="company">Revyl AI:</div>
+                <div class="details">
+                  <div class="role">API Software Development</div>
+                  <div class="date">Sep 2024 - Nov 2024 [Contract, Part-time]</div>
+                </div>
+              </div>
+            </li>
+            <!-- 3) Atlantis AI: Aug 2024 - Sep 2024 -->
+            <li class="experience-item">
+              <img src="assets/atlantis.png" alt="Atlantis AI" />
+              <div class="experience-details">
+                <div class="company">Atlantis AI:</div>
+                <div class="details">
+                  <div class="role">Frontend Website Development</div>
+                  <div class="date">Aug 2024 - Sep 2024 [Contract, Part-time]</div>
+                </div>
+              </div>
+            </li>
+            <!-- 7) Omnia Consulting: Jan 2024 - Mar 2024 -->
             <li class="experience-item">
               <img src="assets/omnia.jpeg" alt="omnia" />
               <div class="experience-details">
@@ -152,6 +233,7 @@
                 </div>
               </div>
             </li>
+            <!-- 8) Sound Antidote: Jan 2024 - Feb 2024 -->
             <li class="experience-item">
               <img src="assets/sount.jpeg" alt="designbot" />
               <div class="experience-details">
@@ -162,6 +244,7 @@
                 </div>
               </div>
             </li>
+            <!-- 12) Neuropeutics Inc: Nov 2023 - Dec 2023 -->
             <li class="experience-item">
               <img src="assets/neuro.png" alt="designbot" />
               <div class="experience-details">
@@ -172,6 +255,7 @@
                 </div>
               </div>
             </li>
+            <!-- 13) DesignBot: Jan 2023 - May 2023 -->
             <li class="experience-item">
               <img src="assets/dbot.png" alt="designbot" />
               <div class="experience-details">
@@ -182,6 +266,7 @@
                 </div>
               </div>
             </li>
+            <!-- 15) The Big Leaf: May 2022 - Jun 2022 -->
             <li class="experience-item">
               <img src="assets/bigleaf.png" alt="bigleaf" />
               <div class="experience-details">
@@ -192,33 +277,13 @@
                 </div>
               </div>
             </li>
-            <li class="experience-item">
-              <img src="assets/telus.png" alt="Telus" style="object-fit: contain;" class="experience-logo"/>
-              <div class="experience-details">
-                <div class="company">Telus World of Science Edmonton:</div>
-                <div class="details">
-                  <div class="role">Guest Service Representative</div>
-                  <div class="date">Jul 2018 - Aug 2019</div>
-                </div>
-              </div>
-            </li>
-            <li class="experience-item">
-              <img src="assets/telus.png" alt="Telus" style="object-fit: contain;" class="experience-logo"/>
-              <div class="experience-details">
-                <div class="company">Telus World of Science Edmonton:</div>
-                <div class="details">
-                  <div class="role">Assistant Science Camp Leader</div>
-                  <div class="date">Jul 2016 - Jun 2018</div>
-                </div>
-              </div>
-            </li>
-
           </ul>
         </ul>
       </main>
+
+      <footer>
+        <p>&copy; 2024 Umair Mazhar</p>
+      </footer>
     </div>
-    <footer>
-      <p>&copy; 2024 Umair Mazhar</p>
-    </footer>
   </body>
 </html>
