@@ -4,7 +4,7 @@ description: "Two week long roadtrip from Vancouver to Los Angeles and back"
 pubDate: "2024-08-23"
 ---
 
-![Sunset over Death Valley, California](/public/deathvalleysunset.jpg)
+![Sunset over Death Valley, California](/deathvalleysunset.jpg)
 *Sunset over Death Valley, California*
 
 ## Destinations
@@ -50,41 +50,41 @@ We crashed at our sketchy AirBnB (we shared a bed in a single room with a veryyy
 
 The next morning our first meal stop was for breakfast at Riverwalk Restaurant in Astoria. I opted for a meal of hash, eggs, and bread, with fresh juice, while Tyler had the same thing but with bacon (haram, astaghfirullah smh). After eating, we took a walk around the pier. Astoria had this quiet, sleepy coastal town vibe that I really liked. The air smelled fresh, with that crisp scent of salt and seaweed.
 
-![Breakfast at Riverwalk Restaurant](/public/images/california/riverwalk_breakfast.jpg)
+![Breakfast at Riverwalk Restaurant](/images/california/riverwalk_breakfast.jpg)
 *Hash, eggs, bread, and juice at Riverwalk Restaurant*
 
-![The pier in Astoria, Oregon](/public/images/california/astoria_pier.jpg)
+![The pier in Astoria, Oregon](/images/california/astoria_pier.jpg)
 *The pier in Astoria, Oregon*
 
 We made a quick stop at Lewis and Clark National Park, where we checked out Fort Clatsop, a reconstructed version of the fort Lewis and Clark built when they first reached the Pacific. I definitely wouldn’t survive in a wooden fort with no WiFi and no TikTok and no Instagram. Next we stopped at a Walmart in Warrenton, Oregon. I don’t know why (probably capitalism), but American Walmarts in the middle of nowhere are way more exciting than Canadian ones in big cities. The sheer variety of stuff on the shelves was wild.
 
-![Tyler saluting the American flag at Walmart](/public/images/california/tyler_flag.jpg)
+![Tyler saluting the American flag at Walmart](/images/california/tyler_flag.jpg)
 *Tyler saluting the American flag at Walmart in Warrenton, Oregon*
 
 ### Cannon Beach
 
 Cannon Beach was straight out of a postcard. The town itself was quaint, clean, and had that perfect beach town aesthetic. The streets were lined with little shops, art galleries, and cozy cafés, all leading up to a massive stretch of golden sand.
 
-![Cannon Beach with Haystack Rock in the distance](/public/images/california/cannon_beach_rock.jpg)
+![Cannon Beach with Haystack Rock in the distance](/images/california/cannon_beach_rock.jpg)
 *Cannon Beach with Haystack Rock in the distance*
 
 We walked along the beach toward the famous Haystack Rock, but what stood out the most (besides the giant rock itself) was the alarming number of dead jellyfish washed up on shore. We must have passed dozens of them. Some were tiny, while others were massive. At one point, Tyler poked one with a stick, just to see what would happen. Spoiler: nothing happened.
 
-![A dead jellyfish washed up on Cannon Beach](/public/images/california/dead_jellyfish.jpg)
+![A dead jellyfish washed up on Cannon Beach](/images/california/dead_jellyfish.jpg)
 *A dead jellyfish washed up on Cannon Beach*
 
 #### Tom's Fish and Chips
 
 Then we stopped for lunch at Tom's Fish and Chips. I can confidently say it was the best fish and chips I've ever ate. I paired my meal with some iced tea, while Tyler tried a local beer that didn't quite meet his expectations. The fish was perfectly crispy, the fries were thick and golden, and the (probably homemade) tartar sauce was amazing.
 
-![Tray of fish and chips from Tom's](/public/images/california/toms_fish_chips.jpg)
+![Tray of fish and chips from Tom's](/images/california/toms_fish_chips.jpg)
 *Plate of fish and chips from Tom's*
 
 ### Neahkahnie Viewpoint
 
 Continuing south along the coast, we stopped at the breathtaking Neahkahnie Viewpoint. This was hands down the most beautiful coastal view we had seen so far. From the edge of the cliff, we could see the entire coastline stretching for miles, the waves crashing against the rocks below. It was the kind of view that made you stop and just appreciate how insane nature is.This view helped cement our growing opinion that Oregon's natural beauty was severely underrated, especially compared to Washington (though we admittedly saw very little of Washington state).
 
-![View from Neahkahnie Viewpoint](/public/images/california/neahkahnie_viewpoint.jpg)
+![View from Neahkahnie Viewpoint](/images/california/neahkahnie_viewpoint.jpg)
 *Coastal view from Neahkahnie Viewpoint*
 
 ---
