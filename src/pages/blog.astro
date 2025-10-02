@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+
+const posts = await getCollection('blog');   // ← automatic
+// newest first
+posts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
+---
+
+<BaseLayout title="Blog" description="Thoughts on semiconductors, engineering, and technology by Umair Mazhar.">
+  <div class="blog-header fade-in">
+    <h1>Blog</h1>
+    <p>Experiences, Trips, and Tech</p>
+  </div>
+
+  <div class="blog-posts">
+    {posts.map((post, i) => (
+      <BlogPost
+        title={post.data.title}
+        pubDate={post.data.pubDate}
+        description={post.data.description}
+        url={`/blog/${post.slug}`}
+        // style={`animation-delay:${i * 80}ms`}
+        class="fade-in"
+      />
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .blog-header{text-align:center;margin-bottom:3rem}
+  .blog-header h1{font-size:2.5rem;margin-bottom:.5rem}
+  .blog-header p{color:var(--text-secondary);font-size:1.125rem}
+  .blog-posts{max-width:100%}
+</style>

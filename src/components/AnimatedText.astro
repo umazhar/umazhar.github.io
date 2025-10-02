@@ -1,0 +1,26 @@
+---
+const { text, delay = 0 } = Astro.props;
+---
+
+<span class="animated-text" style={`animation-delay: ${delay}ms`}>
+  {text}
+</span>
+
+<style>
+  .animated-text {
+    display: inline-block;
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

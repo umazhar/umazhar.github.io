@@ -1,0 +1,69 @@
+---
+const jobs = [
+  {
+    icon: '/icons/amd.jpeg',       // place your own SVG/PNG in public/icons/
+    company: 'AMD',
+    role: 'RTL Design Engineer Co-op',
+    date: 'Sep 2023 – May 2024',
+  },
+  {
+    icon: '/icons/amd.jpeg',
+    company: 'AMD',
+    role: 'Design Verification Engineer Co-op',
+    date: 'May 2024 – Aug 2024',
+  },
+  {
+    icon: '/icons/microchip.jpeg',
+    company: 'Microchip',
+    role: 'DcS Firmware Engineer Co-op',
+    date: 'Sep 2024 – Dec 2024',
+  },
+  {
+    icon: '/icons/jostle.jpeg',
+    company: 'Jostle',
+    role: 'Junior Developer Co-op',
+    date: 'Jan 2023 – Aug 2023',
+  },
+  {
+    icon: '/icons/eworx.jpeg',
+    company: 'eWorx',
+    role: 'Software Engineer Intern',
+    date: 'Jun 2022 – Sep 2022',
+  },
+];
+---
+
+<ul class="timeline">
+  {jobs.map(j => (
+    <li class="timeline-item">
+      <img src={j.icon} alt={j.company} class="icon" />
+      <div class="details">
+        <h3>{j.role}</h3>
+        <p class="company">{j.company}</p>
+        <p class="date">{j.date}</p>
+      </div>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .list { list-style:none; padding:0; margin:0; }
+  .item {
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    padding:1rem 0;
+    border-bottom:1px solid var(--border);
+  }
+  .item:last-child { border:none; }
+  .icon {
+    width:36px; height:36px; object-fit:contain; flex-shrink:0;
+  }
+  .text { flex:1; }
+  .row {
+    display:flex; justify-content:space-between; align-items:baseline; gap:1rem;
+  }
+  .role { font-size:1rem; font-weight:500; margin:0; }
+  .company { font-size:.9rem; color:var(--accent); margin:.15rem 0 0; }
+  .date  { font-size:.8rem; color:var(--text-secondary); white-space:nowrap; }
+</style>
