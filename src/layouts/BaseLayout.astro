@@ -11,6 +11,7 @@ const { title, description } = Astro.props;
     <meta name="description" content={description || 'Umair Mazhar'} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/jpeg" href="/icons/black.jpeg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <title>{title ? `${title} | Umair Mazhar` : 'Umair Mazhar'}</title>
   </head>
   <body>
