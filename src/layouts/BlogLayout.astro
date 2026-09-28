@@ -61,6 +61,12 @@ const { title, description, pubDate, updatedDate } = frontmatter;
   .article-content :global(h2) {
     margin-top: 2rem;
     margin-bottom: 1rem;
+    scroll-margin-top: 2rem;
+  }
+
+  .article-content :global(h3),
+  .article-content :global(h4) {
+    scroll-margin-top: 2rem;
   }
 
   .article-content :global(p) {
@@ -74,6 +80,42 @@ const { title, description, pubDate, updatedDate } = frontmatter;
 
   .article-content :global(li) {
     margin-bottom: 0.5rem;
+  }
+
+  .article-content :global(h2#contents) {
+    margin: 3rem 0 0;
+    padding-bottom: .75rem;
+    border-bottom: 1px solid var(--border);
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .article-content :global(h2#contents + ul) {
+    margin: 0 0 3rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .article-content :global(h2#contents + ul li) {
+    margin: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .article-content :global(h2#contents + ul a) {
+    display: block;
+    padding: .8rem 0;
+    color: var(--text-secondary);
+    font-size: .9rem;
+    line-height: 1.35;
+    transition: color .2s ease, padding-left .2s ease;
+  }
+
+  .article-content :global(h2#contents + ul a:hover) {
+    padding-left: .25rem;
+    color: var(--accent);
+    opacity: 1;
   }
 
   .article-content :global(pre) {

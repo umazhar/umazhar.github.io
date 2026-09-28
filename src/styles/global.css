@@ -62,24 +62,35 @@ a:hover {
   opacity: 0.7;
 }
 
-/* Animations */
-
-@keyframes slideIn {
-  from { transform: translateX(-10px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-
-.fade-up {
-  animation: fadeUp .3s ease-out forwards;
-}
-
-.fade-in {
-  animation: fadeIn 0.6s ease-out;
-}
-
+.fade-up,
+.fade-in,
 .slide-in {
-  animation: slideIn 0.4s ease-out;
+  animation: none;
+}
+
+@keyframes pageFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+::view-transition-old(root) {
+  animation: pageFadeOut 180ms ease-out both;
+}
+
+::view-transition-new(root) {
+  animation: pageFadeIn 320ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
 }
 
 /* Minimal transitions */

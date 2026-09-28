@@ -7,19 +7,16 @@ pubDate: "2024-08-23"
 ![Sunset over Death Valley, California](/deathvalleysunset.jpg)
 *Sunset over Death Valley, California*
 
-## Destinations
+## Contents
 
-### Quick jump
-- [Destinations](#destinations)
-  - [Quick jump](#quick-jump)
 - [Beginnings](#beginnings)
 - [Washington](#washington)
 - [Oregon](#oregon)
-  - [Astoria](#astoria)
-    - [Riverwalk Restaurant](#riverwalk-restaurant)
-  - [Cannon Beach](#cannon-beach)
-    - [Tom's Fish and Chips](#toms-fish-and-chips)
-  - [Neahkahnie Viewpoint](#neahkahnie-viewpoint)
+- [Astoria](#astoria)
+- [Riverwalk Restaurant](#riverwalk-restaurant)
+- [Cannon Beach](#cannon-beach)
+- [Tom's Fish and Chips](#toms-fish-and-chips)
+- [Neahkahnie Viewpoint](#neahkahnie-viewpoint)
 - [California](#california)
 
 ---

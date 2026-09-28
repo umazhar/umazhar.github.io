@@ -7,12 +7,9 @@ pubDate: "2025-10-22"
 ![Die shot of an Intel Mobile Pentium II](/images/computer/dieshot.png)
 *Die shot of an Intel Mobile Pentium II*
 
-## Destinations
+## Contents
 
-### Quick jump
-- [Destinations](#destinations)
-  - [Quick jump](#quick-jump)
-    - [The Basics: Binary Data](#the-basics-binary-data)
+- [The Basics: Binary Data](#the-basics-binary-data)
 
 
 I am going to try and explain how a computer works from the ground up. I am mostly writing this blog post as an exercise for myself in case I get asked it in future interviews and even from friends. 
