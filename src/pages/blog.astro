@@ -20,6 +20,7 @@ posts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
         pubDate={post.data.pubDate}
         description={post.data.description}
         url={`/blog/${post.slug}`}
+        datePrecision={post.data.datePrecision}
         class="fade-in"
       />
     ))}
